@@ -8,3 +8,15 @@ The Lexicon Frontend dev crash course is a hands-on program designed to prepare 
 + Version Control & Agile Methods: Git, GitHub, SCRUM, agile workflows
 + TypeScript: ECMAScript standards, modular code structure, DOM manipulation, event handling, REST and GraphQL APIs
 + React: Next.js, SPA development, component architecture, state management, routing, forms, and commonly used React libraries
+<br>
+## Instructions and workflow
+Instructions (in swedish) for the peoject can be found [here](https://github.com/Lexicon-Utbildning-Front-end-2025-2026/individuellt-arbete).<br>
+<br>Detailed workflow can be found in the project plan while and overview will look like this:
+- [ ] Create plan, wireframe and moc
+- [ ] Project greenlit by teachers/mentors
+- [ ] Userstories created and translated into backlog tasks
+- [ ] Framework and structure set and installed
+- [ ] Sprint 1
+- [ ] Sprint 2
+- [ ] Project completed :tada:
+- [ ] Continued work and updates as knowledgebase grows
