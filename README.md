@@ -10,15 +10,15 @@ The Lexicon Frontend dev crash course is a hands-on program designed to prepare 
 ## Instructions and workflow
 Instructions (in swedish) for the project can be found [here](https://github.com/Lexicon-Utbildning-Front-end-2025-2026/individuellt-arbete).<br>
 Detailed workflow can be found in the [project plan](https://github.com/users/fnelin/projects/5) while an overview look like this:
-- [ ] Create plan, wireframe and moc 🎨
-- [ ] Project greenlit by teachers/mentors ✔️
-- [ ] Userstories created and translated into backlog tasks 📋
-- [ ] Framework and structure set and installed 🖼️
-- [ ] Sprint 1 🏃
-- [ ] Sprint 2 🏃‍♂️
-- [ ] Presentation, demo and feedback 📜
-- [ ] Project completed 🍾
-- [ ] Continued work and updates as knowledgebase grows 👷
+- [X] 🎨 Create plan, wireframe and moc
+- [ ] ✔️ Project greenlit by teachers/mentors
+- [ ] 📋 Userstories created and translated into backlog tasks
+- [ ] 🖼️ Framework and structure set and installed
+- [ ] 🏃 Sprint 1
+- [ ] 🏃 Sprint 2
+- [ ] 📜 Presentation, demo and feedback
+- [ ] 🍾 Project completed
+- [ ] 👷 Continued work and updates as knowledgebase grows
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
 > This readme will be a living object with more details coming as they form.
