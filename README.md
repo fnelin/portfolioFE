@@ -22,9 +22,52 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 - [ ] 📜 Presentation, demo and feedback
 - [ ] 🍾 Project completed
 - [ ] 👷 Continued work and updates as knowledgebase grows
+
+## 💭 Pitch & Moc
+A site to collect all the various types of reviews that I keep writing on different sites. Mostly for my own sake for memory help about things I've encountered, seen, experienced etc.
+### 🧱 Baseline:
++ Responsive design for desktop, tablet and mobile viewers
++ Semantic html and accessability.
++ Basic header and footer. ?Navigation
++ A mellow colorschema
++ Reviews are presented as cards on main page and links to details. ?Modals
++ Ability to save, edit, delete reviews and categories
++ Each review can be categorised with one or several labels
++ As much server side rendering as possible
++ Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
++ Storage could be JSON file, SQLite or PostgreSQL with either Prisma or Drizzler as ORM
++ Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
++ All resources be local but should have the ability for cloudservices when published
+
+### 🧭 Interface & Database design
+Rough design templates representing thoughtprocess of the interface.<br>
+Colors represent elements and not the actual colorschema.
+<table>
+  <tr>
+    <td align="center" valign="top" width="270">
+      <strong>Desktop</strong><br>
+      <img src="./planning/images/screen_desktop.png" width="270">
+    </td>
+    <td align="center" valign="top" width="198">
+      <strong>Tablet</strong><br>
+      <img src="./planning/images/screen_tablet.png" width="200">
+    </td>
+    <td align="center" valign="top" width="125">
+      <strong>Mobile</strong><br>
+      <img src="./planning/images/screen_mobile.png" width="125">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" colspan="3">
+      <strong>Database design</strong><br>
+      <img src="./planning/images/erd.png" width="500">
+    </td>
+  </tr>
+</table>
+
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
-> This readme will be a living object with more details coming as they form.
+> This readme will be a living object with more details coming as they form and the project progress.
 
 ## 📧 Contact
 Fredrik Nelin: fredrik.nelin(@)outlook.com<br>
