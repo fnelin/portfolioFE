@@ -44,17 +44,17 @@ Rough design templates representing thoughtprocess of the interface.<br>
 Colors represent elements and not the actual colorschema.
 <table>
   <tr>
-    <td align="center" valign="top" width="200">
+    <td align="center" valign="top" width="270">
       <strong>Desktop</strong><br>
-      <img src="./planning/images/screen_desktop.png" width="200">
+      <img src="./planning/images/screen_desktop.png" width="270">
     </td>
-    <td align="center" valign="top" width="175">
+    <td align="center" valign="top" width="198">
       <strong>Tablet</strong><br>
-      <img src="./planning/images/screen_tablet.png" width="175">
+      <img src="./planning/images/screen_tablet.png" width="200">
     </td>
-    <td align="center" valign="top" width="150">
+    <td align="center" valign="top" width="125">
       <strong>Mobile</strong><br>
-      <img src="./planning/images/screen_mobile.png" width="150">
+      <img src="./planning/images/screen_mobile.png" width="125">
     </td>
   </tr>
   <tr>
