@@ -27,18 +27,20 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 ## 💭 Pitch & Moc
 A site to collect all the various types of reviews that I keep writing on different sites. Mostly for my own sake for memory help about things I've encountered, seen, experienced etc.
 ### 🧱 Baseline & requirements:
-+ Responsive design for desktop, tablet and mobile viewers
-+ Semantic html and accessability.
-+ Basic header and footer. ?Navigation
-+ A mellow colorschema
-+ Reviews are presented as cards on main page and links to details. ?Modals
-+ Ability to save, edit, delete reviews and categories
-+ Each review can be categorised with one or several labels
-+ As much server side rendering as possible
-+ Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
-+ Storage could be JSON file, SQLite or PostgreSQL with either Prisma or Drizzler as ORM
-+ Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
-+ All resources be local but should have the ability for cloudservices when published
++ <strong>Functional</strong>
+  + Responsive design for desktop, tablet and mobile viewers
+  + Semantic html and accessability.
+  + Basic header and footer. ?Navigation
+  + A mellow colorschema
+  + Reviews are presented as cards on main page and links to details. ?Modals
+  + Ability to save, edit, delete reviews and categories
+  + Each review can be categorised with one or several labels
++ <strong>Technical</strong>
+  + As much server side rendering as possible
+  + Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
+  + Storage could be JSON file, SQLite or PostgreSQL with either Prisma or Drizzler as ORM
+  + Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
+  + All resources be local but should have the ability for cloudservices when published
 
 ### 🧭 Interface & Database design
 Rough design templates representing thoughtprocess of the interface.<br>
