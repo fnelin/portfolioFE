@@ -26,6 +26,7 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 
 ## 💭 Pitch & Moc
 A site to collect all the various types of reviews that I keep writing on different sites. Mostly for my own sake for memory help about things I've encountered, seen, experienced etc.
+
 ### 🧱 Requirements, scope and toolset:
 + <strong>Functional</strong>
   + Responsive design for desktop, tablet and mobile viewers
