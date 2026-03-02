@@ -48,7 +48,6 @@ A site to collect all the various types of reviews that I keep writing on differ
 + <strong>Limited scope</strong>
   + User profile handling will not be implemented
   + All resources be local, no use of cloud service or third party cookies
-
 ### 🧭 Interface & Database design
 Rough design templates representing thoughtprocess of the interface.<br>
 Colors represent elements and not the actual colorschema.
