@@ -26,7 +26,7 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 
 ## 💭 Pitch & Moc
 A site to collect all the various types of reviews that I keep writing on different sites. Mostly for my own sake for memory help about things I've encountered, seen, experienced etc.
-### 🧱 Baseline & requirements:
+### 🧱 Requirements, scope and toolset:
 + <strong>Functional</strong>
   + Responsive design for desktop, tablet and mobile viewers
   + Semantic html and accessability.
@@ -38,9 +38,15 @@ A site to collect all the various types of reviews that I keep writing on differ
 + <strong>Technical</strong>
   + As much server side rendering as possible
   + Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
-  + Storage could be JSON file, SQLite or PostgreSQL with either Prisma or Drizzler as ORM
+  + Storage ~~could be JSON file,~~ SQLite ~~or PostgreSQL~~ with ~~either~~ Prisma ~~or Drizzler~~ as ORM
   + Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
-  + All resources be local but should have the ability for cloudservices when published
++ <strong>AI usage </strong>
+  + Chatgpt & Deepseek used for inspiration, database seed
+  + Copilot used within code editor VSCode for faster repetitive work
+  + Codepen mainly for adhoc unit testing and functional debugging
++ <strong>Limited scope</strong>
+  + User profile handling will not be implemented
+  + All resources be local, no use of cloud service or third party cookies
 
 ### 🧭 Interface & Database design
 Rough design templates representing thoughtprocess of the interface.<br>
