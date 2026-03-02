@@ -74,6 +74,20 @@ Colors represent elements and not the actual colorschema.
   </tr>
 </table>
 
+### 🧱 Baseline:
++ Responsive design for desktop, tablet and mobile viewers
++ Semantic html and accessability.
++ Basic header and footer. ?Navigation
++ A mellow colorschema
++ Reviews are presented as cards on main page and links to details. ?Modals
++ Ability to save, edit, delete reviews and categories
++ Each review can be categorised with one or several labels
++ As much server side rendering as possible
++ Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
++ Storage could be JSON file, SQLite or PostgreSQL with either Prisma or Drizzler as ORM
++ Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
++ All resources be local but should have the ability for cloudservices when published
+
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
 > This readme will be a living object with more details coming as they form and the project progress.
