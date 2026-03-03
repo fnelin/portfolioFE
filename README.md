@@ -12,9 +12,9 @@ The Lexicon Frontend dev crash course is a hands-on program designed to prepare 
 Instructions (in swedish) for the project can be found [here](https://github.com/Lexicon-Utbildning-Front-end-2025-2026/individuellt-arbete).<br>
 Detailed workflow can be found in the [project plan](https://github.com/users/fnelin/projects/5) while an overview look like this:
 - [X] 🎨 Create plan, wireframe and moc
-- [ ] 🛠️ Research requirements, define scope & select toolset
-- [ ] ✔️ Project greenlit by teachers/mentors
-- [ ] 📋 Userstories created and translated into backlog tasks
+- [X] 🛠️ Research requirements, define scope & select toolset
+- [X] ✔️ Project greenlit by teachers/mentors
+- [X] 📋 Userstories created and translated into backlog tasks
 - [ ] 🖼️ Install project and framework
 - [ ] 🏃 Sprint 1 - Backend & architecture
 - [ ] 🏃 Sprint 2 - Layout & UI components
@@ -47,6 +47,7 @@ A site to collect all the various types of reviews that I keep writing on differ
   + Codepen mainly for adhoc unit testing and functional debugging
 + <strong>Limited scope</strong>
   + User profile handling will not be implemented
+  + Database designed for future additions, fex commenting and re-reviews.
   + All resources be local, no use of cloud service or third party cookies
 ### 🧭 Interface & Database design
 Rough design templates representing thoughtprocess of the interface.<br>
