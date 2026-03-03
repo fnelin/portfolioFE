@@ -13,7 +13,7 @@ Instructions (in swedish) for the project can be found [here](https://github.com
 Detailed workflow can be found in the [project plan](https://github.com/users/fnelin/projects/5) while an overview look like this:
 - [X] 🎨 Create plan, wireframe and moc
 - [X] 🛠️ Research requirements, define scope & select toolset
-- [ ] ✔️ Project greenlit by teachers/mentors
+- [X] ✔️ Project greenlit by teachers/mentors
 - [X] 📋 Userstories created and translated into backlog tasks
 - [ ] 🖼️ Install project and framework
 - [ ] 🏃 Sprint 1 - Backend & architecture
