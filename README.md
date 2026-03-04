@@ -145,7 +145,7 @@ Three fonts are used, each for a distinct role:
 ## 🎨 Color Schema
 
 Claude AI helped me pick out a warm editorial palette.<br />
-I asked for an off-white base with deep ink and mellow accent. I adjusted the inital color palette to better suit WCAG AA contrast requirements. For darkmode the colors are basicly switched around.
+I asked for an off-white base with deep ink and mellow accent. The inital color palette got manually adjusted in order to comply with WCAG AA contrast requirements. For darkmode the colors are basicly switched around.
 
 | Swatch | Name | Hex | Usage |
 |--------|------|-----|-------|
