@@ -83,6 +83,8 @@ Colors represent elements and not the actual colorschema.
 Folder structure of the project:
 ```
 root/
+├── (.)/                    #Local configuration and cache folders. Not synced.
+│
 ├── app/
 │   ├── (routes)/           # Routes for pages and slugs
 │   ├── @modal/             # Route for modals
@@ -129,6 +131,31 @@ model category {
   reviews       reviews[]
   }
 ```
+
+## Typography
+
+Three fonts are used, each for a distinct role:
+
+| Role | Font | Usage |
+|------|------|-------|
+| Headings | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) | Titles, section headers, review names |
+| Body | [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) | Review content, descriptions, paragraphs |
+| Mono | [DM Mono](https://fonts.google.com/specimen/DM+Mono) | Scores, dates, tags, metadata |
+
+## Color Schema
+
+Claude AI helped me pick out a warm editorial palette.<br />
+I asked for an off-white base with deep ink and mellow accent.
+
+| Name | Hex | Usage |
+|------|-----|-------|
+| `ink` | `#1a1410` | Primary text, headings |
+| `ink-light` | `#3d322a` | Secondary text |
+| `parch` | `#f5f0e8` | Page background |
+| `parch-dark` | `#e8e0d0` | Card backgrounds, subtle dividers |
+| `accent` | `#c7692a` | Scores, CTAs, links, highlights |
+| `accent-light` | `#e8894a` | Hover states |
+| `muted` | `#8c7b6e` | Dates, tags, metadata |
 
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>

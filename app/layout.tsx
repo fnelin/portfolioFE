@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Plus_Jakarta_Sans, DM_Mono } from 'next/font/google'
 import "./globals.css";
 import TopBar from "@/components/ui/header"
 import BottomBar from "@/components/ui/footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['600', '800'],
+  variable: '--font-heading',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-body',
+})
+
+const dmMono = DM_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono',
+})
 
 export const metadata: Metadata = {
   title: "Portfolio showcase",
@@ -29,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bricolage.variable} ${jakarta.variable} ${dmMono.variable} antialiased`}
       ><header>
           <TopBar />
         </header>
