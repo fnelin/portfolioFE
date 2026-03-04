@@ -24,7 +24,7 @@ return reviews;
 }
 
 export async function readOneReview( id:string){
-
+    const reviewId=id;
     const reviews = await prisma.reviews.findMany({
         select: {
             id: true,
@@ -39,6 +39,9 @@ export async function readOneReview( id:string){
             original_review:true,
             createdAt: true,
             updatedAt: true,
+        },
+        where:{
+            id:reviewId
         },
         orderBy: {
             createdAt: "desc",
