@@ -1,15 +1,19 @@
 export default function HeroGrid() {
-    return <section>
+    /*Change to randomly selected from reviews.*/
+    const imageUrls: string[] = [
+        "images/coffee.jpg",
+        "images/dinner.jpg",
+        "images/lunch.jpg",
+        "images/woodenboar.jpg",
+        "images/rainbow.jpg",
+        "images/chichen_itza.jpg"
+    ]
+
+    return <section className="relative">
         <div className="
-                mx-auto 
-                my-8 
-                w-11/12
-                max-w-87
                 aspect-2/3
                 sm:aspect-square
-                sm:max-w-100
                 md:aspect-2/1
-                md:max-w-10/12
                 grid 
                 grid-cols-2
                 grid-rows-3
@@ -19,48 +23,66 @@ export default function HeroGrid() {
                 md:grid-rows-4
                 bg-parch-dark 
                 text-ink
-                rounded-xl 
-                md:rounded-2xl
-                overflow-hidden
                 [&>img]:w-full
                 [&>img]:h-full
                 [&>img]:object-cover
                 [&>img]:object-center
-                [&>img]:transition-transform
-                [&>img]:duration-500
-                [&>img]:hover:scale-105
-                [&>img]:overflow-hidden
-        ">
-            <img src="images/coffee.jpg"
+                [&>img]:overflow-hidden ">
+
+            <img src={imageUrls[0]} alt=""
                 className="        
                     col-span-2 row-span-2 
                     sm:col-span-2 sm:row-span-2 
                     md:col-span-4 md:row-span-4" />
-            <img src="images/dinner.jpg"
+            <img src={imageUrls[1]} alt=""
                 className="
                     col-span-1 row-span-1 
                     sm:col-span-1 sm:row-span-1 
                     md:col-span-1 md:row-span-2" />
-            <img src="images/lunch.jpg"
+            <img src={imageUrls[2]} alt=""
                 className="
                     col-span-1 row-span-1 
                     sm:col-span-1 sm:row-span-1 
                     md:col-span-2 md:row-span-2" />
-            <img src="images/woodenboar.jpg"
+            <img src={imageUrls[3]} alt=""
                 className="
                     hidden 
                     sm:block sm:col-span-1 sm:row-span-1 
                     md:col-span-1 md:row-span-2" />
-            <img src="images/rainbow.jpg"
+            <img src={imageUrls[4]} alt=""
                 className="
                     hidden 
                     sm:block sm:col-span-1 sm:row-span-1 
                     md:col-span-2 md:row-span-2" />
-            <img src="images/chichen_itza.jpg"
+            <img src={imageUrls[5]} alt=""
                 className="
                     hidden 
                     sm:block sm:col-span-1 sm:row-span-1 
                     md:col-span-2 md:row-span-2" />
         </div>
-    </section>
+        <div className="
+                    absolute 
+                    inset-0 
+                    flex 
+                    flex-col 
+                    items-center 
+                    justify-center 
+                    bg-ink/20 ">
+            <h1 className="
+                    font-heading 
+                    text-4xl 
+                    md:text-6xl 
+                    lg:text-7xl
+                  text-parch ">
+                Reviews and thoughts
+            </h1>
+            <p className="
+                    mt-4 
+                    max-w-xl 
+                    md:text-lg
+                    text-parch ">
+                Because we don't have enough opinions on the internet
+            </p>
+        </div>
+    </section >
 }
