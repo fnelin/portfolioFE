@@ -1,0 +1,39 @@
+//Install instructions!
+https://www.prisma.io/docs/prisma-orm/quickstart/sqlite
+
+//Create model
+model reviews {
+  id              String   @id @default(cuid())
+  titel           String
+  ingress         String
+  body            String
+  score           Int
+  mainmedia       String
+  category        category @relation(fields: [category_id], references: [id])
+  category_id     String
+  original_review String
+  published       Boolean? @default(false)
+  updatedAt       DateTime @updatedAt
+  createdAt       DateTime @default(now())
+}
+
+model category {
+  id            String @id @default(cuid())
+  category_name String
+  reviews       reviews[]
+  }
+
+//After each change to the database structure or seeding
+npx prisma db push
+npx prisma generate
+
+//Generate HAS to be within src/app or sh*t will not work! ie in schame.prisma output has to show a path into this folder.
+
+//Seed from Claude.AI
+npx tsx prisma/seed.ts
+
+//WebbInterface for the database
+npx prisma studio
+
+//Best practice
+https://www.prisma.io/docs/orm/more/troubleshooting/nextjs
