@@ -145,17 +145,17 @@ Three fonts are used, each for a distinct role:
 ## Color Schema
 
 Claude AI helped me pick out a warm editorial palette.<br />
-I asked for an off-white base with deep ink and mellow accent.
+I asked for an off-white base with deep ink and mellow accent. I adjusted the inital color palette to better suit WCAG AA contrast requirements.
 
-| Name | Hex | Usage |
-|------|-----|-------|
-| `ink` | `#1a1410` | Primary text, headings |
-| `ink-light` | `#3d322a` | Secondary text |
-| `parch` | `#f5f0e8` | Page background |
-| `parch-dark` | `#e8e0d0` | Card backgrounds, subtle dividers |
-| `accent` | `#c7692a` | Scores, CTAs, links, highlights |
-| `accent-light` | `#e8894a` | Hover states |
-| `muted` | `#8c7b6e` | Dates, tags, metadata |
+| Swatch | Name | Hex | Usage |
+|--------|------|-----|-------|
+| ![#1a1410](https://placehold.co/60x20/1a1410/1a1410.png) | `ink` | `#1a1410` | Primary text, headings |
+| ![#3d322a](https://placehold.co/60x20/3d322a/3d322a.png) | `ink-light` | `#3d322a` | Secondary text |
+| ![#f5f0e8](https://placehold.co/60x20/f5f0e8/f5f0e8.png) | `parch` | `#f5f0e8` | Page background |
+| ![#e8e0d0](https://placehold.co/60x20/e8e0d0/e8e0d0.png) | `parch-dark` | `#e8e0d0` | Card backgrounds, subtle dividers |
+| ![#c7692a](https://placehold.co/60x20/c7692a/c7692a.png) | `accent` | `#c7692a` | Scores, CTAs, links, highlights |
+| ![#e8894a](https://placehold.co/60x20/e8894a/e8894a.png) | `accent-light` | `#e8894a` | Hover states |
+| ![#5c4d43](https://placehold.co/60x20/8c7b6e/8c7b6e.png) | `muted` | `#5c4d43` | Dates, tags, metadata |
 
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
