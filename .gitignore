@@ -28,11 +28,9 @@ yarn-error.log*
 .env*.local
 .env
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-/generated/prisma
+/app/generated/prisma
+*.db
