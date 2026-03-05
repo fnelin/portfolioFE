@@ -5,6 +5,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
     const griditems = items.map((rev) =>
 
         <li key={`grid-${rev.id}`} className="
+                        my-2
                         max-w-160
                         border
                         rounded-xl
@@ -19,9 +20,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                       hover:bg-parch-dark
                       hover:border-accent-light">
             <img src="images/placeholder.png" className="
-                        w-100
-                        sm:w-75
-                        md:w-50
+                        w-25
+                        sm:w-50
                         aspect-square
                         object-cover
                         object-center
@@ -39,7 +39,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         px-3 
                         py-1
                         font-mono
-                        text-sm 
+                        text-xs
+                        md:text-sm 
                         text-parch 
                         bg-ink 
                         rounded-full">
@@ -53,12 +54,13 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         bg-accent 
                         text-parch 
                         rounded-full">
-                        Score: {rev.score}
+                        <span className="hidden sm:inline"> Score: </span>{rev.score}
                     </span>
                 </div>
                 <h2 className="
-                        font-heading 
-                        text-2xl">
+                        font-heading
+                        text-lg 
+                        sm:text-xl">
                     {rev.titel}
                 </h2>
                 <p className="
