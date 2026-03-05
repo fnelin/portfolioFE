@@ -11,13 +11,18 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
                 bg-parch
                 even:bg-parch-dark
                 ">
-            <Link href={`/review/${rev.id}`} className="
+            <Link href={`/review/${rev.id}`}
+                className="
                 flex 
                 justify-between 
                 gap-4 ">
                 <span>
-                    <span className="mx-4">{rev.score}</span>
-                    <span>{rev.titel}</span>
+                    <span className="mx-4">
+                        {rev.score}
+                    </span>
+                    <span>
+                        {rev.titel}
+                    </span>
                 </span>
                 <p>{rev.category.category_name}</p>
             </Link>

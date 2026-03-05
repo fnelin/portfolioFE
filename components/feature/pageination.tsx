@@ -16,7 +16,7 @@ export default function Pagination({ currentPage, totalPages }: { currentPage: n
     return <>
 
         <div className="
-            mt-6
+            my-6
             flex 
             justify-center 
             items-center 
@@ -46,6 +46,5 @@ export default function Pagination({ currentPage, totalPages }: { currentPage: n
                 Nästa
             </Link>
         </div >
-        ;
     </>
 }

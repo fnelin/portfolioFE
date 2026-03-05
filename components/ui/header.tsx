@@ -11,11 +11,29 @@ export default function TopBar() {
             py-2 
             bg-parch-dark"
     >
-        <a href="/"><Image src={icon} alt="" height={30} /></a>
-        <nav className="text-ink-light font-semibold">
-            <a href="/" className="px-2">Home</a>
-            <a href="/archive" className="px-2">Archive</a>
-            <a href="#" className="px-2">Admin</a>
+        <a href="/">
+            <Image src={icon}
+                alt=""
+                height={30} />
+        </a>
+        <nav className="
+            text-ink-light 
+            font-semibold">
+            <a href="/"
+                className=
+                "px-2">
+                Home
+            </a>
+            <a href="/archive"
+                className=
+                "px-2">
+                Archive
+            </a>
+            <a href="#"
+                className="
+                px-2">
+                Admin
+            </a>
         </nav>
     </div>
 }
