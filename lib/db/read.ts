@@ -17,7 +17,9 @@ export async function readReviewCards( currentPage:number, itemsPerPage: number 
         },
         orderBy: {
             createdAt: "desc",
-            }
+            },
+        skip: (currentPage - 1) * itemsPerPage,
+        take: itemsPerPage,
         }
     )
 return reviews;

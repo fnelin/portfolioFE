@@ -1,6 +1,5 @@
-import ReviewCard from "./reviewcard";
 
-export default function ReviewGrid() {
+export default function ReviewGrid({ children }: { children: any }) {
 
     return <section className="my-8 mx-4">
         <ul className="
@@ -8,7 +7,7 @@ export default function ReviewGrid() {
                     gap-2
                     justify-center">
 
-            <ReviewCard />
+            {children}
         </ul>
     </section>
 }

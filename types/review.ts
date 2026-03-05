@@ -1,12 +1,14 @@
-export type ReviewShort = {
-  id: string
-  titel: string
-  ingress: string
-  score: string
-  mainmedia: string
-  category: string
-  createdAt: string
-  updatedAt: string
+export type reviewshort = {
+    id: string;
+    titel: string;
+    ingress: string;
+    score: number;
+    mainmedia: string;
+    updatedAt: Date;
+    createdAt: Date;
+    category: {
+        category_name: string;
+    };
 }
 
 export type ReviewLong = {
@@ -14,10 +16,12 @@ export type ReviewLong = {
   titel: string
   ingress: string
   body: string
-  score: string
+  score: number
   mainmedia: string
   originalreview: string
-  category: string
-  createdAt: string
-  updatedAt: string
+  createdAt: Date
+  updatedAt: Date
+  category: {
+    category_name: string;
+  };
 }
