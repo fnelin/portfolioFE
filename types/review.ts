@@ -11,7 +11,7 @@ export type reviewshort = {
     };
 }
 
-export type ReviewLong = {
+export type ReviewFull = {
   id: string
   titel: string
   ingress: string
