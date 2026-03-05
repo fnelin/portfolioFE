@@ -1,10 +1,18 @@
+import { prisma } from "../../lib/db/prismaclient"
 import { readReviewCards } from "@/lib/db/read"
 import ReviewGrid from "@/components/ui/reviewgrid";
 import ReviewList from "@/components/ui/reviewlist";
+import Pagination from "@/components/feature/pageination";
 
-export default async function archivepage() {
+export default async function archivepage({ searchParams }: {
+    searchParams: Promise<{ page?: string; pagesize?: string }>
+}) {
 
-    const reviews = await readReviewCards(1, 50)
+    const { page = "1", pagesize = "15" } = await searchParams
+    const currentPage = Number(page)
+    const pageSize = Number(pagesize)
+    const totalPages = Math.ceil(await prisma.reviews.count() / pageSize)
+    const reviews = await readReviewCards(currentPage, pageSize)
 
     return <>
         <section className="
@@ -22,5 +30,6 @@ export default async function archivepage() {
         <ReviewGrid>
             <ReviewList items={reviews} />
         </ReviewGrid>
+        <Pagination currentPage={currentPage} totalPages={totalPages} />
     </>
 }
