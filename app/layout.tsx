@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${bricolage.variable} ${jakarta.variable} ${dmMono.variable} antialiased`}
-      ><header>
+      ><header className="sticky top-0 z-10 opacity-90">
           <TopBar />
         </header>
         {children}
