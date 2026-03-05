@@ -1,4 +1,5 @@
 import type { reviewshort } from "@/types/review"
+import Link from "next/link"
 
 export default function ReviewCard({ items }: { items: reviewshort[] }) {
 
@@ -10,6 +11,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         border
                         rounded-xl
                         flex
+                        even:flex-row-reverse
                         border-accent
                         overflow-hidden 
                         bg-parch
@@ -19,7 +21,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         hover:shadow-lg 
                       hover:bg-parch-dark
                       hover:border-accent-light">
-            <img src="images/placeholder.png" className="
+            <Link href={`/review/${rev.id}`}>
+                <img src="images/placeholder.png" className="
                         w-25
                         sm:w-50
                         aspect-square
@@ -29,7 +32,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         transition-transform
                         duration-300
                         group-hover:scale-110" />
-            <div className="px-4 py-1 w-full flex flex-col justify-between">
+            </Link>
+            <Link href={`/review/${rev.id}`} className="px-4 py-1 w-full flex flex-col justify-between">
                 <div className="
                         w-full 
                         flex 
@@ -54,14 +58,18 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         bg-accent 
                         text-parch 
                         rounded-full">
-                        <span className="hidden sm:inline"> Score: </span>{rev.score}
+                        <span className="hidden sm:inline">Score: </span>{rev.score}
                     </span>
                 </div>
                 <h2 className="
                         font-heading
                         text-lg 
                         sm:text-xl">
-                    {rev.titel}
+                    <span className="hidden sm:block">
+                        {rev.titel}
+                    </span>
+                    <span className="block sm:hidden">
+                        {rev.titel.length > 20 ? `${rev.titel.substring(0, 20)}...` : rev.titel}</span>
                 </h2>
                 <p className="
                         font-body">
@@ -78,8 +86,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         text-muted">
                     {rev.createdAt.toLocaleDateString("sv-se")}
                 </span>
-            </div>
-        </li>
+            </Link>
+        </li >
 
     )
     return griditems

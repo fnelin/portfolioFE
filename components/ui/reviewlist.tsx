@@ -5,7 +5,12 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
 
     const griditems = items.map((rev, index) =>
         <li key={`list-${rev.id}`}
-            className={`${index % 2 === 0 ? 'bg-parch-dark' : 'bg-parch'} py-0.5 px-2`}>
+            className="
+                py-0.5
+                px-2
+                bg-parch
+                even:bg-parch-dark
+                ">
             <Link href={`/review/${rev.id}`} className="
                 flex 
                 justify-between 
