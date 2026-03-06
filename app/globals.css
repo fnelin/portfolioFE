@@ -6,6 +6,19 @@
   --foreground: var(--color-ink);
 }
 
+@keyframes shimmer
+{
+  0%
+  {
+    background-position: 100% 100%;
+  }
+
+  100%
+  {
+    background-position: 0 0;
+  }
+}
+
 @theme
 {
   --font-heading: var(--font-heading);
@@ -19,6 +32,9 @@
   --color-accent: #c7692a;
   --color-accent-light: #e8894a;
   --color-muted: #5c4d43;
+
+  --animate-shimmer: shimmer 1.5s linear infinite;
+
 }
 
 @media (prefers-color-scheme: dark)
@@ -43,4 +59,14 @@ body
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), Helvetica, sans-serif;
+}
+
+.shimmer
+{
+  background: linear-gradient(90deg,
+      var(--color-parch-dark) 30%,
+      var(--color-parch) 50%,
+      var(--color-parch-dark) 70%);
+  background-size: 400%;
+  animation: var(--animate-shimmer);
 }
