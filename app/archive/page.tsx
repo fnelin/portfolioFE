@@ -1,7 +1,7 @@
 import { prisma } from "../../lib/db/prismaclient"
 import { readReviewCards } from "@/lib/db/read"
-import ReviewGrid from "@/components/ui/reviewgrid";
-import ReviewList from "@/components/ui/reviewlist";
+import ReviewGrid from "@/components/feature/reviewgrid";
+import ReviewList from "@/components/feature/reviewlist";
 import Pagination from "@/components/feature/pageination";
 
 export default async function archivepage({ searchParams }: {

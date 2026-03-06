@@ -1,4 +1,4 @@
-import FullReviewCard from "@/components/ui/fullreviewcard"
+import FullReviewCard from "@/components/feature/fullreviewcard"
 
 export default async function ReviewDetails({ params }: { params: Promise<{ id: string }> }) {
     const { id: reviewId } = await params
