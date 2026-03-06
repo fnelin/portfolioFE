@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react"
 
 export default function BottomBar() {
-    const styleContact = "text-muted hover:text-accent transition-colors duration-200"
+    const styleContact = "text-muted transition-colors duration-300 hover:text-accent"
     return (
         <footer className="
             mt-auto

@@ -22,7 +22,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                       hover:bg-parch-dark
                       hover:border-accent-light">
             <Link href={`/review/${rev.id}`}>
-                <img src="images/placeholder.png" className="
+                <img src="images/placeholder.png" alt="" className="
                         w-25
                         sm:w-50
                         aspect-square
@@ -55,8 +55,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         py-1
                         font-mono 
                         text-sm 
-                        bg-accent 
-                        text-parch 
+                        bg-accent
+                        text-parch
                         rounded-full">
                         <span className="hidden sm:inline">Score: </span>{rev.score}
                     </span>
@@ -80,7 +80,6 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         py-0.5
                         flex
                         justify-end
-                        
                         font-mono 
                         text-xs 
                         text-muted">

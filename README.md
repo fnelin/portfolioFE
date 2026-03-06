@@ -17,7 +17,7 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 - [X] 📋 Userstories created and translated into backlog tasks
 - [X] 🖼️ Install project and framework
 - [X] 🏃 Sprint 1 - Backend & architecture
-- [ ] 🏃 Sprint 2 - Layout & UI components
+- [X] 🏃 Sprint 2 - Layout & UI components
 - [ ] 🏃 Sprint 3 - CRUD, accessibility & verification
 - [ ] 📜 Presentation, demo and feedback
 - [ ] 🍾 Project completed
