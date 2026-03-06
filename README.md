@@ -48,8 +48,13 @@ A site to collect all the various types of reviews that I keep writing on differ
 + <strong>Limited scope</strong>
   + User profile handling will not be implemented
   + Limited search/filtering in base version.
-  + Database designed for future additions, fex commenting and re-reviews.
+  + Database designed for future additions, such as commenting and re-reviews.
   + All resources be local, no use of cloud service or third party cookies
+### ⚡ Hackatons
+Friday afternoons are for hackatons. A place and time where the team can freely work on or add features not specified in the sprint planning. Such features will have their commits labeled <strong>Hackaton</strong>. <br />
+So far the hackatons has provided:
++ Skeleton loading forms
++ Basic searchfeature for archive
 ### 🧭 Interface & Database design
 Rough design templates representing thoughtprocess of the interface.<br>
 Colors represent elements and not the actual colorschema.

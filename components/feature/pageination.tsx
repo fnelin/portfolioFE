@@ -25,7 +25,7 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
             gap-4">
 
             <Link
-                href={buildHref(searchParams, { page: (currentPage - 1).toString() })}
+                href={buildHref(searchParams, { page: previousPage.toString() })}
                 aria-disabled={nextDisabled}
                 className={`${styleButton} ${currentPage <= 1
                     ? styleDisabled
@@ -39,7 +39,7 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
             </span>
 
             <Link
-                href={buildHref(searchParams, { page: (currentPage + 1).toString() })}
+                href={buildHref(searchParams, { page: nextPage.toString() })}
                 aria-disabled={previousDisabled}
                 className={`${styleButton} ${currentPage >= totalPages
                     ? styleDisabled
