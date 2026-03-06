@@ -24,7 +24,7 @@ export default async function FullReviewCard({ reviewId }: { reviewId: string })
         <Image src={reviewImage}
             alt=""
             width={200}
-            height="200" />
+            height={200} />
         <div className="
                 px-2
                 grid
