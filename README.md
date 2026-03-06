@@ -162,6 +162,11 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 | ![#e8894a](https://placehold.co/60x20/e8894a/e8894a.png) | `accent-light` | `#e8894a` | Hover states |
 | ![#5c4d43](https://placehold.co/60x20/8c7b6e/8c7b6e.png) | `muted` | `#5c4d43` | Dates, tags, metadata |
 
+## 🐛 Known bugs
++ ~~Full review cards don`t display mobile only formatting~~
++ Pagination show more pages than availible when searching.
++ Results after searching archive lost same width for all items.
+
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
 > This readme will be a living object with more details coming as they form and the project progress.
