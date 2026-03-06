@@ -17,7 +17,9 @@ export async function readReviewCards( currentPage:number, itemsPerPage: number 
         },
         orderBy: {
             createdAt: "desc",
-            }
+            },
+        skip: (currentPage - 1) * itemsPerPage,
+        take: itemsPerPage,
         }
     )
 return reviews;
@@ -25,7 +27,7 @@ return reviews;
 
 export async function readOneReview( id:string){
     const reviewId=id;
-    const reviews = await prisma.reviews.findMany({
+    const reviews = await prisma.reviews.findUnique({
         select: {
             id: true,
             titel: true,
@@ -42,10 +44,7 @@ export async function readOneReview( id:string){
         },
         where:{
             id:reviewId
-        },
-        orderBy: {
-            createdAt: "desc",
-            }
+        }
         }
     )
 return reviews;
