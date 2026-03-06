@@ -30,6 +30,6 @@ export default async function archivepage({ searchParams }: {
         <ReviewGrid>
             <ReviewList items={reviews} />
         </ReviewGrid>
-        <Pagination currentPage={currentPage} totalPages={totalPages} />
+        <Pagination currentPage={currentPage} totalPages={totalPages} searchParams={await searchParams} />
     </>
 }

@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { buildHref } from "@/lib/buildhref"
 
-export default function Pagination({ currentPage, totalPages }: { currentPage: number; totalPages: number }) {
+
+export default function Pagination({ currentPage, totalPages, searchParams }: { currentPage: number; totalPages: number; searchParams: Record<string, string> }) {
 
     const styleButton = "px-2 py-0.5 border rounded-2xl border-ink/50  text-ink-light "
     const styleActive = "hover:bg-accent hover:text-parch hover:border-ink/25 transition-all duration-300 ease-in"
@@ -23,7 +25,7 @@ export default function Pagination({ currentPage, totalPages }: { currentPage: n
             gap-4">
 
             <Link
-                href={`?page=${previousPage}`}
+                href={buildHref(searchParams, { page: (currentPage - 1).toString() })}
                 aria-disabled={nextDisabled}
                 className={`${styleButton} ${currentPage <= 1
                     ? styleDisabled
@@ -37,7 +39,7 @@ export default function Pagination({ currentPage, totalPages }: { currentPage: n
             </span>
 
             <Link
-                href={`?page=${nextPage}`}
+                href={buildHref(searchParams, { page: (currentPage + 1).toString() })}
                 aria-disabled={previousDisabled}
                 className={`${styleButton} ${currentPage >= totalPages
                     ? styleDisabled
