@@ -23,7 +23,7 @@ export default function ModalReview({ children }: { children: React.ReactNode })
                 m-auto
                 rounded-2xl
                 bg-parch
-                shadow-[0_8px_32px_rgba(26,20,16,0.25)]
+                shadow-ink/50
                 backdrop:bg-ink/50
                 backdrop:backdrop-blur-sm">
             {children}
