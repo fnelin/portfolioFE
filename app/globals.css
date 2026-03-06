@@ -63,7 +63,7 @@ body
 
 .shimmer
 {
-  background: linear-gradient(90deg,
+  background: linear-gradient(-45deg,
       var(--color-parch-dark) 30%,
       var(--color-parch) 50%,
       var(--color-parch-dark) 70%);
