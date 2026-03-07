@@ -27,6 +27,32 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 ## 💭 Pitch & Moc
 A site to collect all the various types of reviews that I keep writing on different sites. Mostly for my own sake for memory help about things I've encountered, seen, experienced etc.
 
+### 🧭 Interface & Database design
+Rough design templates representing thoughtprocess of the interface.<br>
+Colors represent elements and not the actual colorschema.
+<table>
+  <tr>
+    <td align="center" valign="top" width="270">
+      <strong>Desktop</strong><br>
+      <img src="./planning/images/screen_desktop.png" width="270">
+    </td>
+    <td align="center" valign="top" width="198">
+      <strong>Tablet</strong><br>
+      <img src="./planning/images/screen_tablet.png" width="200">
+    </td>
+    <td align="center" valign="top" width="125">
+      <strong>Mobile</strong><br>
+      <img src="./planning/images/screen_mobile.png" width="125">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" colspan="3">
+      <strong>Database design</strong><br>
+      <img src="./planning/images/erd.png" width="500">
+    </td>
+  </tr>
+</table>
+
 ### 🧱 Requirements, scope and toolset:
 + <strong>Functional</strong>
   + Responsive design for desktop, tablet and mobile viewers
@@ -55,31 +81,6 @@ Friday afternoons are for hackatons. A place and time where the team can freely 
 So far the hackatons has provided:
 + Skeleton loading forms
 + Basic searchfeature for archive
-### 🧭 Interface & Database design
-Rough design templates representing thoughtprocess of the interface.<br>
-Colors represent elements and not the actual colorschema.
-<table>
-  <tr>
-    <td align="center" valign="top" width="270">
-      <strong>Desktop</strong><br>
-      <img src="./planning/images/screen_desktop.png" width="270">
-    </td>
-    <td align="center" valign="top" width="198">
-      <strong>Tablet</strong><br>
-      <img src="./planning/images/screen_tablet.png" width="200">
-    </td>
-    <td align="center" valign="top" width="125">
-      <strong>Mobile</strong><br>
-      <img src="./planning/images/screen_mobile.png" width="125">
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" colspan="3">
-      <strong>Database design</strong><br>
-      <img src="./planning/images/erd.png" width="500">
-    </td>
-  </tr>
-</table>
 
 ## 📂 Project Structure
 

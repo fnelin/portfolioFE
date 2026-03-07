@@ -7,8 +7,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
 
         <li key={`grid-${rev.id}`} className="
                         my-2
-                        max-w-50
-                        sm:w-150
+                        max-w-50                
                         sm:max-w-150
                         h-90
                         sm:h-auto
@@ -18,6 +17,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         flex-col
                         sm:flex-row
                         sm:even:flex-row-reverse
+                        md:even:justify-self-end
+                        md:odd:justify-self-start
                         border-accent
                         overflow-hidden 
                         bg-parch
@@ -30,7 +31,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
             <Link href={`/review/${rev.id}`}>
                 <img src="images/placeholder.png" alt="" className="
                         w-50
-                        sm:w-50
+                        sm:w-100
                         aspect-square
                         object-cover
                         object-center
@@ -48,10 +49,10 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         flex 
                         flex-col 
                         justify-between">
-                <div>
+                <div className="">
                     <div className="
                         flex 
-                        justify-between 
+                        justify-between
                         items-center">
                         <span className="
                         px-3 
@@ -78,7 +79,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                     <h2 className="
                         font-heading
                         text-lg 
-                        sm:text-xl">
+                        sm:text-xl
+                        sm:py-2">
                         <span className="hidden sm:block">
                             {rev.titel}
                         </span>
