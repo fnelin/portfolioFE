@@ -8,6 +8,7 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
             className="
                 py-0.5
                 px-2
+                w-6/8
                 bg-parch
                 even:bg-parch-dark
                 ">

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { buildHref } from "@/lib/buildhref"
+import { styleButton, styleActive, styleDisabled } from "@/lib/constants"
 
 
 export default function Pagination({ currentPage, totalPages, searchParams }: { currentPage: number; totalPages: number; searchParams: Record<string, string> }) {
 
-    const styleButton = "px-2 py-0.5 border rounded-2xl border-ink/50  text-ink-light "
-    const styleActive = "hover:bg-accent hover:text-parch hover:border-ink/25 transition-all duration-300 ease-in"
-    const styleDisabled = "opacity-40 cursor-not-allowed"
+    const styleBtn = styleButton
+    const styleAct = styleActive
+    const styleDis = styleDisabled
 
     /*Checkers for disabling buttons navigating out of bounds*/
     const previousDisabled = currentPage <= 1 ? true : false
@@ -27,9 +28,9 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
             <Link
                 href={buildHref(searchParams, { page: previousPage.toString() })}
                 aria-disabled={nextDisabled}
-                className={`${styleButton} ${currentPage <= 1
-                    ? styleDisabled
-                    : styleActive}`}
+                className={`${styleBtn} ${currentPage <= 1
+                    ? styleDis
+                    : styleAct}`}
             >
                 Föregående
             </Link>
@@ -41,9 +42,9 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
             <Link
                 href={buildHref(searchParams, { page: nextPage.toString() })}
                 aria-disabled={previousDisabled}
-                className={`${styleButton} ${currentPage >= totalPages
-                    ? styleDisabled
-                    : styleActive}`}
+                className={`${styleBtn} ${currentPage >= totalPages
+                    ? styleDis
+                    : styleAct}`}
             >
                 Nästa
             </Link>

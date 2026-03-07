@@ -1,6 +1,6 @@
 import { prisma } from "./prismaclient"
 
-export async function readReviewCards( currentPage:number, itemsPerPage: number, searchString:string ="", categories: string[] = []){
+export async function readReviewCards( currentPage:number, itemsPerPage: number, searchString:string, categories: string[] = []){
 
     const reviews = await prisma.reviews.findMany({
         select: {
