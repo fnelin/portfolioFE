@@ -7,11 +7,18 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
 
         <li key={`grid-${rev.id}`} className="
                         my-2
-                        max-w-160
+                        max-w-50                
+                        sm:max-w-150
+                        h-90
+                        sm:h-auto
                         border
                         rounded-xl
                         flex
-                        even:flex-row-reverse
+                        flex-col
+                        sm:flex-row
+                        sm:even:flex-row-reverse
+                        md:even:justify-self-end
+                        md:odd:justify-self-start
                         border-accent
                         overflow-hidden 
                         bg-parch
@@ -23,23 +30,31 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                       hover:border-accent-light">
             <Link href={`/review/${rev.id}`}>
                 <img src="images/placeholder.png" alt="" className="
-                        w-25
-                        sm:w-50
+                        w-50
+                        sm:w-100
                         aspect-square
                         object-cover
                         object-center
                         overflow-hidden
                         transition-transform
                         duration-300
-                        group-hover:scale-110" />
+                        sm:group-hover:scale-110" />
             </Link>
-            <Link href={`/review/${rev.id}`} className="px-4 py-1 w-full flex flex-col justify-between">
-                <div className="
-                        w-full 
+            <Link href={`/review/${rev.id}`} className="
+                        px-4 
+                        py-1 
+                        sm:w-full
+                        h-40
+                        sm:h-auto
                         flex 
-                        justify-between 
+                        flex-col 
+                        justify-between">
+                <div className="">
+                    <div className="
+                        flex 
+                        justify-between
                         items-center">
-                    <span className="
+                        <span className="
                         px-3 
                         py-1
                         font-mono
@@ -48,9 +63,9 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         text-parch 
                         bg-ink 
                         rounded-full">
-                        {rev.category.category_name}
-                    </span>
-                    <span className="
+                            {rev.category.category_name}
+                        </span>
+                        <span className="
                         px-3 
                         py-1
                         font-mono 
@@ -58,23 +73,25 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         bg-accent
                         text-parch
                         rounded-full">
-                        <span className="hidden sm:inline">Score: </span>{rev.score}
-                    </span>
-                </div>
-                <h2 className="
+                            <span className="hidden sm:inline">Score: </span>{rev.score}
+                        </span>
+                    </div>
+                    <h2 className="
                         font-heading
                         text-lg 
-                        sm:text-xl">
-                    <span className="hidden sm:block">
-                        {rev.titel}
-                    </span>
-                    <span className="block sm:hidden">
-                        {rev.titel.length > 20 ? `${rev.titel.substring(0, 20)}...` : rev.titel}</span>
-                </h2>
-                <p className="
+                        sm:text-xl
+                        sm:py-2">
+                        <span className="hidden sm:block">
+                            {rev.titel}
+                        </span>
+                        <span className="block sm:hidden">
+                            {rev.titel.length > 12 ? `${rev.titel.substring(0, 12)}...` : rev.titel}</span>
+                    </h2>
+                    <p className="
                         font-body">
-                    {rev.ingress}
-                </p>
+                        {rev.ingress}
+                    </p>
+                </div>
                 <span className="
                         px-2 
                         py-0.5

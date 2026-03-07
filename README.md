@@ -81,6 +81,35 @@ Colors represent elements and not the actual colorschema.
   </tr>
 </table>
 
+### 🧱 Requirements, scope and toolset:
++ <strong>Functional</strong>
+  + Responsive design for desktop, tablet and mobile viewers
+  + Semantic html and accessability.
+  + Basic header and footer. ?Navigation
+  + A mellow colorschema
+  + Reviews are presented as cards on main page and links to details. ?Modals
+  + Ability to save, edit, delete reviews and categories
+  + Each review can be categorised with one or several labels
++ <strong>Technical</strong>
+  + As much server side rendering as possible
+  + Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
+  + Storage ~~could be JSON file,~~ SQLite ~~or PostgreSQL~~ with ~~either~~ Prisma ~~or Drizzler~~ as ORM
+  + Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
++ <strong>AI usage </strong>
+  + Chatgpt & Deepseek used for inspiration, database seed
+  + Copilot used within code editor VSCode for faster repetitive work
+  + Codepen mainly for adhoc unit testing and functional debugging
++ <strong>Limited scope</strong>
+  + User profile handling will not be implemented
+  + Limited search/filtering in base version.
+  + Database designed for future additions, such as commenting and re-reviews.
+  + All resources be local, no use of cloud service or third party cookies
+### ⚡ Hackatons
+Friday afternoons are for hackatons. A place and time where the team can freely work on or add features not specified in the sprint planning. Such features will have their commits labeled <strong>Hackaton</strong>. <br />
+So far the hackatons has provided:
++ Skeleton loading forms
++ Basic searchfeature for archive
+
 ## 📂 Project Structure
 
 ### ⚙️ Architecture & backend
@@ -161,6 +190,11 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 | ![#c7692a](https://placehold.co/60x20/c7692a/c7692a.png) | `accent` | `#c7692a` | Scores, CTAs, links, highlights |
 | ![#e8894a](https://placehold.co/60x20/e8894a/e8894a.png) | `accent-light` | `#e8894a` | Hover states |
 | ![#5c4d43](https://placehold.co/60x20/8c7b6e/8c7b6e.png) | `muted` | `#5c4d43` | Dates, tags, metadata |
+
+## 🐛 Known bugs
++ ~~Full review cards don`t display mobile only formatting~~
++ Pagination show more pages than availible when searching.
++ Results after searching archive lost same width for all items.
 
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>

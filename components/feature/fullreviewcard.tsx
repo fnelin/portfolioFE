@@ -11,20 +11,29 @@ export default async function FullReviewCard({ reviewId }: { reviewId: string })
     const reviewImage = "/images/placeholder.png"
 
     return <article className="
-                        m-4
-                        max-w-160
-                        min-w-100
-                        border
-                        rounded-xl
-                        flex
-                        even:flex-row-reverse
-                        border-accent
-                        overflow-hidden 
-                        bg-parch">
+            m-4
+            max-w-50
+            sm:w-150
+            sm:max-w-150
+            h-auto
+            border
+            rounded-xl
+            flex
+            flex-col
+            sm:flex-row
+            border-accent
+            overflow-hidden 
+            bg-parch">
         <Image src={reviewImage}
             alt=""
             width={200}
-            height={200} />
+            height={200}
+            className="
+                sm:min-w-50
+                aspect-square
+                object-cover
+                object-center
+                overflow-hidden"/>
         <div className="
                 px-2
                 grid
@@ -78,26 +87,26 @@ export default async function FullReviewCard({ reviewId }: { reviewId: string })
                 </span>
             </h2>
             <p className="
-                my-1
-                sm:my-2
-                italic
-                text-sm
-                sm:text-lg">
+               my-1
+               sm:my-2
+               italic
+               text-sm
+               sm:text-lg">
                 {review.ingress}
             </p>
             <p className="
-                text-sm
-                sm:text-base">
+               text-sm
+               sm:text-base">
                 {review.body}
             </p>
             <span className="
-                        px-2 
-                        py-0.5
-                        flex
-                        justify-end
-                        font-mono 
-                        text-xs 
-                        text-muted">
+                px-2 
+                py-0.5
+                flex
+                justify-end
+                font-mono 
+                text-xs 
+                text-muted">
                 {review.createdAt.toLocaleDateString("sv-se")}
             </span>
         </div>

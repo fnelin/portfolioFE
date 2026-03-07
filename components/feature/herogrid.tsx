@@ -66,10 +66,13 @@ export default function HeroGrid() {
                     flex 
                     flex-col 
                     items-center 
-                    justify-center 
+                    sm:justify-center
                     bg-ink/20 ">
             <h1 className="
-                    font-heading 
+                    relative
+                    font-heading
+                    top-[25%]
+                    sm:top-auto
                     text-4xl 
                     md:text-6xl 
                     lg:text-7xl
@@ -77,6 +80,9 @@ export default function HeroGrid() {
                 Reviews and thoughts
             </h1>
             <p className="
+                    relative
+                    top-[25%]
+                    sm:top-auto
                     mt-4 
                     max-w-xl 
                     md:text-lg
