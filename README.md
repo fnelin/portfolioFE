@@ -27,34 +27,6 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 ## 💭 Pitch & Moc
 A site to collect all the various types of reviews that I keep writing on different sites. Mostly for my own sake for memory help about things I've encountered, seen, experienced etc.
 
-### 🧱 Requirements, scope and toolset:
-+ <strong>Functional</strong>
-  + Responsive design for desktop, tablet and mobile viewers
-  + Semantic html and accessability.
-  + Basic header and footer. ?Navigation
-  + A mellow colorschema
-  + Reviews are presented as cards on main page and links to details. ?Modals
-  + Ability to save, edit, delete reviews and categories
-  + Each review can be categorised with one or several labels
-+ <strong>Technical</strong>
-  + As much server side rendering as possible
-  + Techstack consisting of HTML / Tailwind(CSS) / Typescript / NextJS / Storage
-  + Storage ~~could be JSON file,~~ SQLite ~~or PostgreSQL~~ with ~~either~~ Prisma ~~or Drizzler~~ as ORM
-  + Simple database design created at [dbdiagram.io](https://dbdiagram.io/d/portfolioFE-69a2a405a3f0aa31e1602d78)
-+ <strong>AI usage </strong>
-  + Chatgpt & Deepseek used for inspiration, database seed
-  + Copilot used within code editor VSCode for faster repetitive work
-  + Codepen mainly for adhoc unit testing and functional debugging
-+ <strong>Limited scope</strong>
-  + User profile handling will not be implemented
-  + Limited search/filtering in base version.
-  + Database designed for future additions, such as commenting and re-reviews.
-  + All resources be local, no use of cloud service or third party cookies
-### ⚡ Hackatons
-Friday afternoons are for hackatons. A place and time where the team can freely work on or add features not specified in the sprint planning. Such features will have their commits labeled <strong>Hackaton</strong>. <br />
-So far the hackatons has provided:
-+ Skeleton loading forms
-+ Basic searchfeature for archive
 ### 🧭 Interface & Database design
 Rough design templates representing thoughtprocess of the interface.<br>
 Colors represent elements and not the actual colorschema.
@@ -109,11 +81,8 @@ Friday afternoons are for hackatons. A place and time where the team can freely 
 So far the hackatons has provided:
 + Skeleton loading forms
 + Basic searchfeature for archive
-
 ## 📂 Project Structure
-
 ### ⚙️ Architecture & backend
-
 Folder structure of the project:
 ```
 root/
@@ -165,19 +134,14 @@ model category {
   reviews       reviews[]
   }
 ```
-
 ## 🔤 Typography
-
 Three fonts are used, each for a distinct role:
-
 | Role | Font | Usage |
 |------|------|-------|
 | Headings | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) | Titles, section headers, review names |
 | Body | [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) | Review content, descriptions, paragraphs |
 | Mono | [DM Mono](https://fonts.google.com/specimen/DM+Mono) | Scores, dates, tags, metadata |
-
 ## 🎨 Color Schema
-
 Claude AI helped me pick out a warm editorial palette.<br />
 I asked for an off-white base with deep ink and mellow accent. The inital color palette got manually adjusted in order to comply with WCAG AA contrast requirements. For darkmode the colors are basicly switched around.
 
@@ -190,16 +154,13 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 | ![#c7692a](https://placehold.co/60x20/c7692a/c7692a.png) | `accent` | `#c7692a` | Scores, CTAs, links, highlights |
 | ![#e8894a](https://placehold.co/60x20/e8894a/e8894a.png) | `accent-light` | `#e8894a` | Hover states |
 | ![#5c4d43](https://placehold.co/60x20/8c7b6e/8c7b6e.png) | `muted` | `#5c4d43` | Dates, tags, metadata |
-
 ## 🐛 Known bugs
 + ~~Full review cards don`t display mobile only formatting~~
 + Pagination show more pages than availible when searching.
 + Results after searching archive lost same width for all items.
-
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
 > This readme will be a living object with more details coming as they form and the project progress.
-
 # 🏅 About the author
 Former MCSD SQLServer developer who ventured into economics, finance and marketing before coming back as modern frontend developer with fullstack insights. <br>
 Other skills include but are not limited to analytical and business-oriented IT economist with experience in portfolio governance, budgeting, financial workflows and administration. Combines strong technical capabilities with a background in system development, databases, and BI. Skilled at driving structured ways of working, enabling informed decision making through clear analysis and acting as the link between IT and a broader organization.
