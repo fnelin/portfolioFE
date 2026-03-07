@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { buildHref } from "@/lib/buildhref"
+import { styleButton, styleActive } from "@/lib/constants"
 
 type Category = { id: string; category_name: string }
 
@@ -21,7 +22,7 @@ export default function SearchBar({
     const [selectedCategories, setSelectedCategories] = useState<string[]>(
         searchParams.categories ? searchParams.categories.split(",") : []
     )
-    const styleButton = "px-2 py-0.5 border rounded-2xl border-ink/50  text-ink-light hover:bg-accent hover:text-parch hover:border-ink/25 transition-all duration-300 ease-in cursor-pointer"
+    const styleBtn = styleButton + " " + styleActive
     const styleInput = "bg-parch border border-ink/20 rounded-lg px-3 py-1.5 font-body text-sm text-ink focus:outline-none focus:border-accent transition-colors duration-200"
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
@@ -62,67 +63,47 @@ export default function SearchBar({
                     </div>
                 </div>
                 <div className="flex flex-wrap gap-4 items-end">
-                    {/* Dropdown trigger */}
-                    <div className="relative">
-                        <button
-                            onClick={() => setDropdownOpen(prev => !prev)}
-                            className={styleInput}
-                        >
-                            Kategori ▾
-                        </button>
-                        {dropdownOpen && (
-                            <div
-                                className="absolute z-10 mt-1 bg-parch border border-ink/20 rounded-lg shadow-lg p-2 flex flex-col gap-1 min-w-37.5"
-                                onClick={e => e.stopPropagation()}
+                    <div
+                        className="mt-1 bg-parch border border-ink/20 rounded-lg flex flex-wrap p-2 gap-2 min-w-37.5 w-full">
+                        {categories.map(cat => (
+                            <button
+                                type="button"
+                                key={cat.id}
+                                onClick={() => toggleCategory(cat.id)}
+                                className={`font-mono text-xs px-3 py-1 rounded-full transition-colors duration-200
+                                        ${selectedCategories.includes(cat.id)
+                                        ? 'bg-accent text-parch border'
+                                        : 'bg-parch text-ink-light border hover:text-accent'
+                                    }`}
                             >
-                                {categories.map(cat => (
-                                    <label key={cat.id} className="flex items-center gap-2 font-mono text-sm text-ink cursor-pointer hover:text-accent">
-                                        <input
-                                            type="checkbox"
-                                            checked={selectedCategories.includes(cat.id)}
-                                            onChange={() => toggleCategory(cat.id)}
-                                            className="accent-accent"
-                                        />
-                                        {cat.category_name}
-                                    </label>
+                                {cat.category_name}
+                            </button>
+                        ))}
+                    </div>
+                    <div className="flex justify-between w-full px-4">
+                        {/* Page size */}
+                        <div className="flex flex-col gap-1">
+                            <select
+                                value={pageSize}
+                                onChange={e => setPageSize(e.target.value)}
+                                className={styleInput}
+                            >
+                                {pageSizeOptions.map(size => (
+                                    <option key={size} value={size}>{size} per sida</option>
                                 ))}
-                            </div>
-                        )}
-                    </div>
+                            </select>
+                        </div>
 
-                    {/* Page size */}
-                    <div className="flex flex-col gap-1">
-                        <select
-                            value={pageSize}
-                            onChange={e => setPageSize(e.target.value)}
-                            className={styleInput}
+                        {/* Submit */}
+                        <span
+                            onClick={handleSubmit}
+                            className={styleBtn}
                         >
-                            {pageSizeOptions.map(size => (
-                                <option key={size} value={size}>{size} per sida</option>
-                            ))}
-                        </select>
+                            Sök
+                        </span>
                     </div>
-
-                    {/* Submit */}
-                    <span
-                        onClick={handleSubmit}
-                        className={styleButton}
-                    >
-                        Sök
-                    </span>
-                    {/* Selected pills */}
-                    <div className="flex flex-wrap gap-1">
-                        {selectedCategories.map(id => {
-                            const cat = categories.find(c => c.id === id)
-                            return (
-                                <span key={id} className="flex items-center gap-1 px-2 py-0.5 bg-ink text-parch font-mono text-xs rounded-full">
-                                    {cat?.category_name}
-                                    <button type="button" onClick={() => toggleCategory(id)}>×</button>
-                                </span>
-                            )
-                        })}
-                    </div>
-                </div></div>
+                </div>
+            </div>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import { prisma } from "../../lib/db/prismaclient"
 import { readReviewCards, fetchCategories } from "@/lib/db/read"
-import ReviewGrid from "@/components/feature/reviewgrid";
+import { ReviewGridArchive } from "@/components/feature/reviewgrid";
 import ReviewList from "@/components/feature/reviewlist";
 import Pagination from "@/components/feature/pageination";
 import SearchBar from "@/components/feature/searchbar";
@@ -30,13 +30,14 @@ export default async function archivepage({ searchParams }: {
                 Archive
             </h2>
         </section>
+
         <SearchBar
             searchParams={await searchParams}
             categories={categoriesAll} />
 
-        <ReviewGrid>
+        <ReviewGridArchive>
             <ReviewList items={reviews} />
-        </ReviewGrid>
+        </ReviewGridArchive>
         <Pagination currentPage={currentPage}
             totalPages={totalPages}
             searchParams={await searchParams} />
