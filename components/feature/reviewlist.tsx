@@ -6,6 +6,7 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
 
     const styleRow = "px-2 py-1"
     const styleRowLink = styleRow + " hover:cursor-pointer hover:text-accent"
+    const titleLenght = 35;
 
     const griditems = items.map((rev, index) =>
         <tr key={`list-${rev.id}`}
@@ -16,11 +17,16 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
             <td className={styleRow} align="right">
                 {rev.score}
             </td><td className={styleRowLink}>
-                <Link href={`/review/${rev.id}`}>{rev.titel}</Link>
+                <Link href={`/review/${rev.id}`}>
+                    {rev.titel.substring(0, titleLenght)}
+                    {rev.titel.length < titleLenght || `...`}
+                </Link>
             </td><td className={styleRow}>
                 {rev.category.category_name}
             </td><td className={styleRowLink} align="center">
-                <Link href={`/admin/review/edit/${rev.id}`}><LucidePencilLine /></Link>
+                <Link href={`/admin/review/edit/${rev.id}`}>
+                    <LucidePencilLine />
+                </Link>
             </td><td className={styleRowLink} align="center">
                 <LucideTrash2 />
             </td>
