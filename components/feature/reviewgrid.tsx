@@ -22,7 +22,7 @@ export function ReviewGridArchive({ children }: { children: any }) {
     return <section className="my-8">
         <table className="mx-auto table-fixed">
             <caption className="text-muted">
-                Sökresultat
+                Search results
             </caption>
             <thead className="">
                 <tr key={`list-header`}
@@ -30,13 +30,13 @@ export function ReviewGridArchive({ children }: { children: any }) {
                     bg-ink-light
                     text-parch">
                     <th align="left" className={styleHeader}>
-                        Betyg
+                        Score
                     </th><th align="left" className={styleHeader}>
-                        Titel
+                        Title
                     </th><th align="left" className={styleHeader}>
-                        Kategori
+                        Category
                     </th><th align="left" className={styleHeader}>
-                        Ändra
+                        Edit
                     </th><th align="left" className={styleHeader}>
                         Delete
                     </th>

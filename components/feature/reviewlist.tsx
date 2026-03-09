@@ -20,7 +20,7 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
             </td><td className={styleRow}>
                 {rev.category.category_name}
             </td><td className={styleRowLink} align="center">
-                <Link href={`/admin/review/${rev.id}/edit`}><LucidePencilLine /></Link>
+                <Link href={`/admin/review/edit/${rev.id}`}><LucidePencilLine /></Link>
             </td><td className={styleRowLink} align="center">
                 <LucideTrash2 />
             </td>

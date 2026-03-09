@@ -12,6 +12,8 @@ export default async function EditReviewModal({ params }: { params: Promise<{ id
     if (!review) notFound()
 
     return (
-        <ReviewForm review={review} categories={categories} />
+        <article className="flex justify-center">
+            <ReviewForm review={review} categories={categories} />
+        </article>
     )
 }

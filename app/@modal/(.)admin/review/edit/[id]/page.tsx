@@ -1,5 +1,5 @@
 import ReviewForm from "@/components/feature/reviewform"
-import ModalReview from "@/components/feature/modalreview"
+import ModalReview from "@/components/feature/modalreviewaction"
 import { fetchCategories, readOneReview } from "@/lib/db/read"
 import { notFound } from "next/navigation"
 

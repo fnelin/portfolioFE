@@ -4,6 +4,8 @@ import { fetchCategories } from "@/lib/db/read"
 export default async function CreateReviewModal() {
     const categories = await fetchCategories()
     return (
-        <ReviewForm categories={categories} />
+        <article className="flex justify-center">
+            <ReviewForm categories={categories} />
+        </article>
     )
 }
