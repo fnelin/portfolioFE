@@ -159,10 +159,12 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 + Pagination show more pages than availible when searching.
 + Results after searching archive lost same width for all items.
 ## 📌 Wishlist
-+ Client side form valudation.
++ Client side form validation for create and edit forms.
 + Toasters to signify change of data
 + Easy file upload of pictures when creating or editing reviews.
 + GPS coordinates linked to small maps from google.
++ Custom 404page
++ Replace score with stars/boilerplate green
 
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
