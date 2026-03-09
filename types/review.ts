@@ -25,3 +25,16 @@ export type ReviewFull = {
     category_name: string;
   };
 }
+export type Category = { id: string; category_name: string }
+
+export type Review = {
+    id: string
+    titel: string
+    ingress: string
+    body: string
+    score: number
+    mainmedia: string
+    original_review: string
+    category_id: string
+    published: boolean | null
+}

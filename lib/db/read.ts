@@ -49,6 +49,8 @@ export async function readOneReview( id:string){
             body: true,
             score: true,
             mainmedia:true,
+            category_id:true,
+            published:true,
             category:{
                 select: {category_name:true,}
             },

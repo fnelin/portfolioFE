@@ -24,7 +24,6 @@ export default function SearchBar({
     )
     const styleBtn = styleButton + " " + styleActive
     const styleInput = "bg-parch border border-ink/20 rounded-lg px-3 py-1.5 font-body text-sm text-ink focus:outline-none focus:border-accent transition-colors duration-200"
-    const [dropdownOpen, setDropdownOpen] = useState(false)
 
     const toggleCategory = (id: string) => {
         setSelectedCategories(prev =>

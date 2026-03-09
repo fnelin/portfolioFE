@@ -1,33 +1,30 @@
 import type { reviewshort } from "@/types/review"
 import Link from "next/link"
+import { LucideTrash2, LucidePencilLine } from "lucide-react"
 
 export default function ReviewList({ items }: { items: reviewshort[] }) {
 
+    const styleRow = "px-2 py-1"
+    const styleRowLink = styleRow + " hover:cursor-pointer hover:text-accent"
+
     const griditems = items.map((rev, index) =>
-        <li key={`list-${rev.id}`}
+        <tr key={`list-${rev.id}`}
             className="
-                py-0.5
-                px-2
-                w-6/8
                 bg-parch
                 even:bg-parch-dark
                 ">
-            <Link href={`/review/${rev.id}`}
-                className="
-                flex 
-                justify-between 
-                gap-4 ">
-                <span>
-                    <span className="mx-4">
-                        {rev.score}
-                    </span>
-                    <span>
-                        {rev.titel}
-                    </span>
-                </span>
-                <p>{rev.category.category_name}</p>
-            </Link>
-        </li>
+            <td className={styleRow} align="right">
+                {rev.score}
+            </td><td className={styleRowLink}>
+                <Link href={`/review/${rev.id}`}>{rev.titel}</Link>
+            </td><td className={styleRow}>
+                {rev.category.category_name}
+            </td><td className={styleRowLink} align="center">
+                <Link href={`/admin/review/${rev.id}/edit`}><LucidePencilLine /></Link>
+            </td><td className={styleRowLink} align="center">
+                <LucideTrash2 />
+            </td>
+        </tr>
     )
     return griditems
 }

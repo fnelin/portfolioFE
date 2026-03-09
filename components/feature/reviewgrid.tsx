@@ -17,39 +17,34 @@ export default function ReviewGrid({ children }: { children: any }) {
 
 export function ReviewGridArchive({ children }: { children: any }) {
 
-    return <section className="my-8 mx-4">
-        <ul className="
-                    w-9/10
-                    max-w-210
-                    mx-auto
-                    grid
-                    grid-cols-1
-                    justify-items-center">
-            <li key={`list-header`}
-                className="
-                py-0.5
-                w-6/8
-                max-w-210
-                mx-auto
-                bg-ink-light
-                text-parch
-                even:bg-parch-dark">
-                <div className="
-                flex 
-                justify-between 
-                gap-4 ">
-                    <span>
-                        <span className="mx-1">
-                            Poäng
-                        </span>
-                        <span>
-                            Titel
-                        </span>
-                    </span>
-                    <p className="mx-1">Kategori</p>
-                </div>
-            </li>
-            {children}
-        </ul>
-    </section>
+    const styleHeader = "px-2 py-1"
+
+    return <section className="my-8">
+        <table className="mx-auto table-fixed">
+            <caption className="text-muted">
+                Sökresultat
+            </caption>
+            <thead className="">
+                <tr key={`list-header`}
+                    className="
+                    bg-ink-light
+                    text-parch">
+                    <th align="left" className={styleHeader}>
+                        Betyg
+                    </th><th align="left" className={styleHeader}>
+                        Titel
+                    </th><th align="left" className={styleHeader}>
+                        Kategori
+                    </th><th align="left" className={styleHeader}>
+                        Ändra
+                    </th><th align="left" className={styleHeader}>
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {children}
+            </tbody>
+        </table>
+    </section >
 }
