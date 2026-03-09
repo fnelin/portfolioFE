@@ -1,6 +1,6 @@
 import { prisma } from "./prismaclient"
 
-export async function readReviewCards( currentPage:number, itemsPerPage: number ){
+export async function readReviewCards( currentPage:number, itemsPerPage: number, searchString:string, categories: string[] = []){
 
     const reviews = await prisma.reviews.findMany({
         select: {
@@ -15,6 +15,17 @@ export async function readReviewCards( currentPage:number, itemsPerPage: number 
             createdAt: true,
             updatedAt:true
         },
+        where: {
+            AND: [
+                ...(searchString.length > 0 ? [{
+                    OR: [
+                        { titel: { contains: searchString } },
+                        { body: { contains: searchString } }
+                    ]
+                }] : []),
+                ...(categories.length > 0 ? [{ category_id: { in: categories } }] : [])
+            ]
+        },
         orderBy: {
             createdAt: "desc",
             },
@@ -27,6 +38,9 @@ return reviews;
 
 export async function readOneReview( id:string){
     const reviewId=id;
+    /* REMOVE BEFORE PROD */
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
     const reviews = await prisma.reviews.findUnique({
         select: {
             id: true,
@@ -48,4 +62,20 @@ export async function readOneReview( id:string){
         }
     )
 return reviews;
+}
+
+export async function fetchCategories(){
+    
+    const categories= await prisma.category.findMany({
+        select:{
+            id:true,
+            category_name:true,},
+            orderBy: {
+                category_name:"asc",
+            },
+        }
+    )
+
+return categories
+
 }

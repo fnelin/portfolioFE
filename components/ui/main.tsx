@@ -1,9 +1,9 @@
 import { readReviewCards } from "@/lib/db/read"
-import ReviewCard from "./reviewcard";
-import ReviewGrid from "./reviewgrid";
+import ReviewCard from "../feature/reviewcard";
+import ReviewGrid from "../feature/reviewgrid";
 
 export default async function MainGrid() {
-    const reviews = await readReviewCards(1, 5)
+    const reviews = await readReviewCards(1, 5, "")
 
     return <>
         <section className="flex justify-center bg-parch-dark py-8">

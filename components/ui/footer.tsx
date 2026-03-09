@@ -29,7 +29,7 @@ export default function BottomBar() {
                     font-mono 
                     text-xs 
                     text-muted">
-                    © {new Date().getFullYear()} — All opinions are my own
+                    © {new Date().getFullYear()} Me — All opinions are my own
                 </p>
 
                 <div className="

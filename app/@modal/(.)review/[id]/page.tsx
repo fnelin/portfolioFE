@@ -1,12 +1,16 @@
+import { Suspense } from "react"
 import ModalReview from "@/components/feature/modalreview"
-import FullReviewCard from "@/components/ui/fullreviewcard"
+import FullReviewCard from "@/components/feature/fullreviewcard"
+import ReviewSkeleton from "@/components/feature/reviewskeleton"
 
 export default async function ModalPage({ params }: { params: Promise<{ id: string }> }) {
     const { id: reviewId } = await params
 
     return (
         <ModalReview>
-            <FullReviewCard reviewId={reviewId} />
+            <Suspense fallback={<ReviewSkeleton />}>
+                <FullReviewCard reviewId={reviewId} />
+            </Suspense>
         </ModalReview>
     )
 }
