@@ -1,6 +1,20 @@
 import { prisma } from "./prismaclient"
 
-export async function readReviewCards( currentPage:number, itemsPerPage: number, searchString:string, categories: string[] = []){
+export async function readReviewCards( 
+    currentPage:number, 
+    itemsPerPage: number, 
+    searchString:string, 
+    categories: string[] = [], 
+    sortBy:string = "Date", 
+    sortDirection:string = "Descending"){
+
+    const sortMap = new Map<string, string>();
+    sortMap.set("Date","createdAt")
+    sortMap.set("Title","titel")
+    sortMap.set("Score","score")
+
+    const sortByOrder = sortMap.get(sortBy)
+    const sortOrder = sortDirection === "Ascending" ? "asc": "desc"
 
     const reviews = await prisma.reviews.findMany({
         select: {
@@ -28,7 +42,7 @@ export async function readReviewCards( currentPage:number, itemsPerPage: number,
             ]
         },
         orderBy: {
-            createdAt: "desc",
+            [sortByOrder!]: sortOrder,
             },
         skip: (currentPage - 1) * itemsPerPage,
         take: itemsPerPage,

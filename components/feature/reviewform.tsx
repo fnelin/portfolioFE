@@ -134,12 +134,52 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
                 <label className={styleLabel}>Publish</label>
             </div>
             <span className="flex gap-8 justify-between">
-                <button type="reset" onClick={() => router.back()}>Don`t save</button>
-                <button type="reset" disabled={isPending}>Reset form</button>
+                <button type="reset"
+                    onClick={() => router.back()}
+                    className="
+                        mt-2 
+                        px-4 
+                        py-2
+                        border
+                        border-ink/20
+                        rounded-lg
+                        cursor-pointer
+                        hover:border
+                        hover:border-ink/60
+                        ">
+                    Don`t save
+                </button>
+                <button type="reset"
+                    disabled={isPending}
+                    className="
+                        mt-2 
+                        px-4 
+                        py-2
+                        border
+                        border-ink/20
+                        rounded-lg
+                        cursor-pointer
+                        hover:border
+                        hover:border-ink/60
+                        ">
+                    Reset form
+                </button>
                 <button
                     type="submit"
                     disabled={isPending}
-                    className="mt-2 px-4 py-2 bg-accent text-parch font-mono text-sm rounded-lg hover:bg-accent-light transition-colors duration-200">
+                    className="
+                        mt-2 
+                        px-4 
+                        py-2 
+                        bg-accent 
+                        text-parch 
+                        font-mono 
+                        text-sm 
+                        rounded-lg 
+                        cursor-pointer
+                        hover:bg-accent-light 
+                        transition-colors 
+                        duration-200">
                     {isPending ? "Saving..." : isEdit ? "Save changes" : "Save review"}
                 </button>
 
