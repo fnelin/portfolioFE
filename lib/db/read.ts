@@ -23,7 +23,8 @@ export async function readReviewCards( currentPage:number, itemsPerPage: number,
                         { body: { contains: searchString } }
                     ]
                 }] : []),
-                ...(categories.length > 0 ? [{ category_id: { in: categories } }] : [])
+                ...(categories.length > 0 ? [{ category_id: { in: categories } }] : []),
+                { published: true }
             ]
         },
         orderBy: {
@@ -49,6 +50,8 @@ export async function readOneReview( id:string){
             body: true,
             score: true,
             mainmedia:true,
+            category_id:true,
+            published:true,
             category:{
                 select: {category_name:true,}
             },

@@ -27,6 +27,6 @@ model reviews {
 
 model category {
   id            String    @id @default(cuid())
-  category_name String
+  category_name String    @unique
   reviews       reviews[]
 }
