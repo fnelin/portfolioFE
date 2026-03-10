@@ -24,7 +24,6 @@ export default function SearchBar({
     )
     const styleBtn = styleButton + " " + styleActive
     const styleInput = "bg-parch border border-ink/20 rounded-lg px-3 py-1.5 font-body text-sm text-ink focus:outline-none focus:border-accent transition-colors duration-200"
-
     const toggleCategory = (id: string) => {
         setSelectedCategories(prev =>
             prev.includes(id) ? prev.filter(c => c !== id) : [...prev, id]
@@ -50,7 +49,7 @@ export default function SearchBar({
                     <div className="flex flex-col gap-1 flex-1 min-w-50">
                         <label className="font-mono text-xs text-muted uppercase tracking-widest">
                             Search
-                        </label>
+                        </label >
                         <input
                             type="text"
                             value={search}
@@ -59,8 +58,8 @@ export default function SearchBar({
                             placeholder="Title or content..."
                             className={styleInput}
                         />
-                    </div>
-                </div>
+                    </div >
+                </div >
                 <div className="flex flex-wrap gap-4 items-end">
                     <div
                         className="mt-1 bg-parch border border-ink/20 rounded-lg flex flex-wrap p-2 gap-2 min-w-37.5 w-full">
@@ -96,13 +95,12 @@ export default function SearchBar({
                         {/* Submit */}
                         <span
                             onClick={handleSubmit}
-                            className={styleBtn}
-                        >
+                            className={styleBtn}>
                             Search
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        </span >
+                    </div >
+                </div >
+            </div >
+        </section >
     )
 }

@@ -84,8 +84,8 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                                 Score:
                             </span>
                             {rev.score}
-                        </span>
-                    </div>
+                        </span >
+                    </div >
                     <h2 className="
                         font-heading
                         text-lg 
@@ -96,13 +96,13 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         </span>
                         <span className="block sm:hidden">
                             {rev.titel.length > 12 ? `${rev.titel.substring(0, 12)}...` : rev.titel}
-                        </span>
-                    </h2>
+                        </span >
+                    </h2 >
                     <p className="
                         font-body">
                         {rev.ingress}
                     </p>
-                </div>
+                </div >
                 <span className="
                         px-2 
                         py-0.5
@@ -113,7 +113,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         text-muted">
                     {rev.createdAt.toLocaleDateString("sv-se")}
                 </span>
-            </Link>
+            </Link >
         </li >
 
     )

@@ -167,7 +167,6 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 + Replace score with stars/boilerplate green
 + Full fledged admin mode
 + Search functions such as sort by columns (asc, desc) etc, view table/cards
-
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>
 > This readme will be a living object with more details coming as they form and the project progress.

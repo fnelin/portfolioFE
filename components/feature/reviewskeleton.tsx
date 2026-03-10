@@ -76,43 +76,18 @@ export default function ReviewSkeleton() {
                          w-5/6 
                          rounded
                          shimmer" />
-                         </div>
+                         </div >
 
-                    </div>
-               </div>
+                    </div >
+               </div >
                {/* Body */}
-               <div className="
-                    m-2
-                    flex 
-                    flex-col 
-                    gap-2">
-                    <div className="
-                         h-4 
-                         w-full 
-                         rounded
-                         shimmer" />
-                    <div className="
-                         h-4 w-full 
-                         rounded
-                         shimmer" />
-                    <div className="
-                         h-4 
-                         w-4/6 
-                         rounded
-                         shimmer" />
+               <div className="m-2 flex flex-col gap-2">
+                    < div className="h-4 w-full rounded shimmer" />
+                    < div className="h-4 w-full rounded shimmer" />
+                    < div className="h-4 w-2/3 rounded shimmer" />
+                    {/* Date */}
+                    < div className="h-3 w-20 m-2 rounded shimmer" />
                </div>
-
-               {/* Date */}
-               <div className="
-                     h-3 
-                     w-20 
-                     m-2 
-                     ml-auto
-                     rounded 
-                     self-end 
-                     shimmer" />
-
-
           </article >
      )
 }

@@ -11,6 +11,7 @@ export default async function FullReviewCard({ reviewId }: { reviewId: string })
     const reviewImage = review.mainmedia || "/images/placeholder.svg"
 
     return <article className=" 
+
             m-4
             max-w-50
             sm:w-150
@@ -59,6 +60,7 @@ export default async function FullReviewCard({ reviewId }: { reviewId: string })
                         {review.category.category_name}
                     </span>
                     <span className="
+
                         px-3 
                         py-1
                         font-mono 
@@ -114,4 +116,5 @@ export default async function FullReviewCard({ reviewId }: { reviewId: string })
             </span>
         </div>
     </article >
+
 }
