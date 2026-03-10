@@ -9,7 +9,7 @@ type Category = { id: string; category_name: string }
 export default function SearchBar({
     searchParams,
     categories,
-    pageSizeOptions = [10, 25, 50]
+    pageSizeOptions = [8, 16, 32]
 }: {
     searchParams: Record<string, string>
     categories: Category[]
@@ -49,14 +49,14 @@ export default function SearchBar({
                     {/* Text search */}
                     <div className="flex flex-col gap-1 flex-1 min-w-50">
                         <label className="font-mono text-xs text-muted uppercase tracking-widest">
-                            Sök
+                            Search
                         </label>
                         <input
                             type="text"
                             value={search}
                             onChange={e => setSearch(e.target.value)}
                             onKeyDown={e => e.key === "Enter" && handleSubmit()}
-                            placeholder="Titel eller innehåll..."
+                            placeholder="Title or content..."
                             className={styleInput}
                         />
                     </div>
@@ -88,7 +88,7 @@ export default function SearchBar({
                                 className={styleInput}
                             >
                                 {pageSizeOptions.map(size => (
-                                    <option key={size} value={size}>{size} per sida</option>
+                                    <option key={size} value={size}>{size} per page</option>
                                 ))}
                             </select>
                         </div>
@@ -98,7 +98,7 @@ export default function SearchBar({
                             onClick={handleSubmit}
                             className={styleBtn}
                         >
-                            Sök
+                            Search
                         </span>
                     </div>
                 </div>

@@ -1,8 +1,7 @@
 export default function ReviewSkeleton() {
-     http://localhost:3000/
      return (
           <article className="
-            m            m-4
+            m-4
             max-w-50
             sm:w-150
             sm:max-w-150
@@ -21,7 +20,11 @@ export default function ReviewSkeleton() {
                 w-50 
                 min-h-50 
                 shrink-0
-                shimmer" />
+                shimmer">
+                         <img src="/images/placeholder.svg" className="
+                opacity-40
+                -z-10" />
+                    </div>
                     <div className="
                  px-2 
                  grid 

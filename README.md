@@ -76,7 +76,7 @@ Colors represent elements and not the actual colorschema.
   + Limited search/filtering in base version.
   + Database designed for future additions, such as commenting and re-reviews.
   + All resources be local, no use of cloud service or third party cookies
-### ⚡ Hackatons
+## ⚡ Hackatons
 Friday afternoons are for hackatons. A place and time where the team can freely work on or add features not specified in the sprint planning. Such features will have their commits labeled <strong>Hackaton</strong>. <br />
 So far the hackatons has provided:
 + Skeleton loading forms
@@ -165,6 +165,8 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 + GPS coordinates linked to small maps from google.
 + Custom 404page
 + Replace score with stars/boilerplate green
++ Full fledged admin mode
++ Search functions such as sort by columns (asc, desc) etc, view table/cards
 
 > [!NOTE]
 > 🚧 **More to come**. 🚧 <br>

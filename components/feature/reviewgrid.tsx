@@ -20,7 +20,7 @@ export function ReviewGridArchive({ children }: { children: any }) {
     const styleHeader = "px-2 py-1"
 
     return <section className="my-8">
-        <table className="mx-auto table-fixed">
+        <table className="mx-auto w-180">
             <caption className="text-muted">
                 Search results
             </caption>
@@ -29,15 +29,15 @@ export function ReviewGridArchive({ children }: { children: any }) {
                     className="
                     bg-ink-light
                     text-parch">
-                    <th align="left" className={styleHeader}>
+                    <th align="left" className={`w-[5%] ${styleHeader}`}>
                         Score
-                    </th><th align="left" className={styleHeader}>
+                    </th><th align="left" className={`w-[50%] ${styleHeader}`}>
                         Title
-                    </th><th align="left" className={styleHeader}>
+                    </th><th align="left" className={`w-[25%] ${styleHeader}`}>
                         Category
-                    </th><th align="left" className={styleHeader}>
+                    </th><th align="left" className={`w-[5%] ${styleHeader}`}>
                         Edit
-                    </th><th align="left" className={styleHeader}>
+                    </th><th align="left" className={`w-[5%] ${styleHeader}`}>
                         Delete
                     </th>
                 </tr>
