@@ -9,16 +9,22 @@ type Category = { id: string; category_name: string }
 export default function SearchBar({
     searchParams,
     categories,
-    pageSizeOptions = [8, 16, 32]
+    pageSizeOptions = [8, 16, 32],
+    sortByOptions = ["Date", "Score", "Title"],
+    sortDirectionOptions = ["Ascending", "Descending"]
 }: {
     searchParams: Record<string, string>
     categories: Category[]
     pageSizeOptions?: number[]
+    sortByOptions?: string[]
+    sortDirectionOptions?: string[]
 }) {
     const router = useRouter()
 
     const [search, setSearch] = useState(searchParams.search ?? "")
-    const [pageSize, setPageSize] = useState(searchParams.pagesize ?? "15")
+    const [pageSize, setPageSize] = useState(searchParams.pagesize ?? "16")
+    const [sortBy, setSortBy] = useState(searchParams.sortby ?? "Date")
+    const [sortDirection, setSortDirection] = useState(searchParams.sortdirection ?? "Descending")
     const [selectedCategories, setSelectedCategories] = useState<string[]>(
         searchParams.categories ? searchParams.categories.split(",") : []
     )
@@ -35,6 +41,8 @@ export default function SearchBar({
             page: "1",
             search,
             pagesize: pageSize,
+            sortby: sortBy,
+            sortdirection: sortDirection,
             categories: selectedCategories.join(",")
         }
         router.push(buildHref(searchParams, overrides))
@@ -81,6 +89,9 @@ export default function SearchBar({
                     <div className="flex justify-between w-full px-4">
                         {/* Page size */}
                         <div className="flex flex-col gap-1">
+                            <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                                Items:
+                            </label>
                             <select
                                 value={pageSize}
                                 onChange={e => setPageSize(e.target.value)}
@@ -91,7 +102,34 @@ export default function SearchBar({
                                 ))}
                             </select>
                         </div>
-
+                        {/* Sort by */}
+                        <div className="flex flex-col gap-1">
+                            <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                                Sort by:
+                            </label>
+                            <select
+                                value={sortBy}
+                                onChange={e => setSortBy(e.target.value)}
+                                className={styleInput}>
+                                {sortByOptions.map(by => (
+                                    <option key={by} value={by}>{by}</option>
+                                ))}
+                            </select>
+                        </div>
+                        {/* Sort direction */}
+                        <div className="flex flex-col gap-1">
+                            <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                                Direction:
+                            </label>
+                            <select
+                                value={sortDirection}
+                                onChange={e => setSortDirection(e.target.value)}
+                                className={styleInput}>
+                                {sortDirectionOptions.map(dir => (
+                                    <option key={dir} value={dir}>{dir}</option>
+                                ))}
+                            </select>
+                        </div>
                         {/* Submit */}
                         <span
                             onClick={handleSubmit}
