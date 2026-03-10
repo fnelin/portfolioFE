@@ -3,6 +3,9 @@ import Link from "next/link"
 
 export default function ReviewCard({ items }: { items: reviewshort[] }) {
 
+    const maxTitel = 12
+    const maxIngress = 50
+
     const griditems = items.map((rev) =>
 
         <li key={`grid-${rev.id}`} className="
@@ -14,7 +17,6 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         rounded-xl
                         flex
                         flex-col
-                        shrink-0
                         sm:flex-row
                         sm:even:flex-row-reverse
                         md:even:justify-self-end
@@ -30,15 +32,12 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                       hover:bg-parch-dark
                       hover:border-accent-light">
             <Link href={`/review/${rev.id}`} className="
-                        block 
-                        w-50 
                         shrink-0">
                 <img src={`${(rev.mainmedia.length > 1) ? rev.mainmedia : `defaultCardPicture.svg`}`}
                     width={200}
                     height={200}
                     alt=""
                     className="
-                        w-50
                         aspect-square
                         object-cover
                         object-center
@@ -95,12 +94,17 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                             {rev.titel}
                         </span>
                         <span className="block sm:hidden">
-                            {rev.titel.length > 12 ? `${rev.titel.substring(0, 12)}...` : rev.titel}
+                            {rev.titel.length > maxTitel ? `${rev.titel.substring(0, maxTitel)}...` : rev.titel}
                         </span >
                     </h2 >
                     <p className="
                         font-body">
-                        {rev.ingress}
+                        <span className="hidden sm:block">
+                            {rev.ingress}
+                        </span>
+                        <span className="block sm:hidden">
+                            {rev.ingress.length > maxIngress ? `${rev.ingress.substring(0, maxIngress)}...` : rev.ingress}
+                        </span >
                     </p>
                 </div >
                 <span className="

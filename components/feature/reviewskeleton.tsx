@@ -23,7 +23,7 @@ export default function ReviewSkeleton() {
                 shimmer">
                          <img src="/images/placeholder.svg" className="
                 opacity-40
-                -z-10" />
+                " />
                     </div>
                     <div className="
                  px-2 

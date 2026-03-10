@@ -4,6 +4,7 @@ With this repository a connected [project plan](https://github.com/users/fnelin/
 ### ❔ About Lexicon Frontend development crash course
 The Lexicon Frontend dev crash course is a hands-on program designed to prepare for modern Frontend development roles. The training spans the full development lifecycle, from foundational HTML and CSS to building advanced applications with TypeScript, Node.js, JavaScript and React. Advanced AI assistance will be clearly marked within the code if such has been utilized from either Codepen and/or Copilot.<br>
 ### 🔍 Key areas of focus:
+While the course in itself focus on a wide variety of technologies for creating modern webb applications this project will include most, but not all, of below.
 + HTML & CSS: Semantic HTML, CSS modules, Tailwind, Flexbox, CSS Grid, responsive design, accessibility
 + Version Control & Agile Methods: Git, GitHub, SCRUM, agile workflows
 + TypeScript: ECMAScript standards, modular code structure, DOM manipulation, event handling, REST and GraphQL APIs
@@ -157,6 +158,7 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 ## 🐛 Known bugs
 + ~~Full review cards don`t display mobile only formatting~~
 + Pagination show more pages than availible when searching.
+  + This is due to how Prisma works. Need to add another query with same WHERE clause and without take/skip for total count of selection
 + Results after searching archive lost same width for all items.
 ## 📌 Wishlist
 + Client side form validation for create and edit forms.

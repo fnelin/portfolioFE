@@ -30,6 +30,7 @@ export default function SearchBar({
     )
     const styleBtn = styleButton + " " + styleActive
     const styleInput = "bg-parch border border-ink/20 rounded-lg px-3 py-1.5 font-body text-sm text-ink focus:outline-none focus:border-accent transition-colors duration-200"
+    const styleLabel = "font-mono text-xs text-muted uppercase tracking-widest"
     const toggleCategory = (id: string) => {
         setSelectedCategories(prev =>
             prev.includes(id) ? prev.filter(c => c !== id) : [...prev, id]
@@ -50,12 +51,18 @@ export default function SearchBar({
 
     return (
         <section className="grid w-3/4 place-self-center">
-            <div className="-mt-3 p-4 bg-parch-dark rounded-xl border border-ink/10">
+            <div className="
+                    -mt-3 
+                    p-4 
+                    bg-parch-dark 
+                    rounded-xl 
+                    border 
+                    border-ink/10
+                    shadow">
                 <div className="pb-2">
-
                     {/* Text search */}
                     <div className="flex flex-col gap-1 flex-1 min-w-50">
-                        <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                        <label className={styleLabel}>
                             Search
                         </label >
                         <input
@@ -70,7 +77,19 @@ export default function SearchBar({
                 </div >
                 <div className="flex flex-wrap gap-4 items-end">
                     <div
-                        className="mt-1 bg-parch border border-ink/20 rounded-lg flex flex-wrap p-2 gap-2 min-w-37.5 w-full">
+                        className="
+                            mt-1 
+                            p-2 
+                            bg-parch 
+                            border 
+                            border-ink/20 
+                            rounded-lg 
+                            flex 
+                            flex-wrap 
+                            justify-evenly 
+                            gap-2 
+                            min-w-37.5
+                            w-full">
                         {categories.map(cat => (
                             <button
                                 type="button"
@@ -89,7 +108,7 @@ export default function SearchBar({
                     <div className="flex justify-between w-full px-4">
                         {/* Page size */}
                         <div className="flex flex-col gap-1">
-                            <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                            <label className={styleLabel}>
                                 Items:
                             </label>
                             <select
@@ -104,7 +123,7 @@ export default function SearchBar({
                         </div>
                         {/* Sort by */}
                         <div className="flex flex-col gap-1">
-                            <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                            <label className={styleLabel}>
                                 Sort by:
                             </label>
                             <select
@@ -118,7 +137,7 @@ export default function SearchBar({
                         </div>
                         {/* Sort direction */}
                         <div className="flex flex-col gap-1">
-                            <label className="font-mono text-xs text-muted uppercase tracking-widest">
+                            <label className={styleLabel}>
                                 Direction:
                             </label>
                             <select
