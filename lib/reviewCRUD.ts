@@ -2,6 +2,7 @@
 import { revalidatePath } from "next/cache"
 import { writeReview, createCategory } from "@/lib/db/write"
 import { updateReview } from "@/lib/db/update"
+import { softDeleteReview } from "@/lib/db/delete"
 
 export async function writeReviewDb(formData: FormData){
     await writeReview(formData)
@@ -17,4 +18,10 @@ export async function createCategoryDb(name: string) {
     const category = await createCategory(name)
     revalidatePath("/archive")
     return category
+}
+
+export async function softDeleteReviewDb(id:string){
+ await softDeleteReview(id)
+ revalidatePath("/archive")
+
 }

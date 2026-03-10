@@ -23,7 +23,8 @@ export async function readReviewCards( currentPage:number, itemsPerPage: number,
                         { body: { contains: searchString } }
                     ]
                 }] : []),
-                ...(categories.length > 0 ? [{ category_id: { in: categories } }] : [])
+                ...(categories.length > 0 ? [{ category_id: { in: categories } }] : []),
+                { published: true }
             ]
         },
         orderBy: {

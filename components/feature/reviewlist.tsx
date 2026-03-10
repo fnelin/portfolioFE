@@ -28,7 +28,9 @@ export default function ReviewList({ items }: { items: reviewshort[] }) {
                     <LucidePencilLine />
                 </Link>
             </td><td className={styleRowLink} align="center">
-                <LucideTrash2 />
+                <Link href={`/admin/review/delete/${rev.id}`}>
+                    <LucideTrash2 />
+                </Link>
             </td>
         </tr>
     )

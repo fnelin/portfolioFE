@@ -134,7 +134,8 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
                 <label className={styleLabel}>Publish</label>
             </div>
             <span className="flex gap-8 justify-between">
-                <button type="reset" disabled={isPending}>Cancel</button>
+                <button type="reset" onClick={() => router.back()}>Don`t save</button>
+                <button type="reset" disabled={isPending}>Reset form</button>
                 <button
                     type="submit"
                     disabled={isPending}
