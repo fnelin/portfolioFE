@@ -9,7 +9,7 @@ type Category = { id: string; category_name: string }
 export default function SearchBar({
     searchParams,
     categories,
-    pageSizeOptions = [10, 25, 50]
+    pageSizeOptions = [8, 16, 32]
 }: {
     searchParams: Record<string, string>
     categories: Category[]
@@ -24,8 +24,6 @@ export default function SearchBar({
     )
     const styleBtn = styleButton + " " + styleActive
     const styleInput = "bg-parch border border-ink/20 rounded-lg px-3 py-1.5 font-body text-sm text-ink focus:outline-none focus:border-accent transition-colors duration-200"
-    const [dropdownOpen, setDropdownOpen] = useState(false)
-
     const toggleCategory = (id: string) => {
         setSelectedCategories(prev =>
             prev.includes(id) ? prev.filter(c => c !== id) : [...prev, id]
@@ -50,18 +48,18 @@ export default function SearchBar({
                     {/* Text search */}
                     <div className="flex flex-col gap-1 flex-1 min-w-50">
                         <label className="font-mono text-xs text-muted uppercase tracking-widest">
-                            Sök
-                        </label>
+                            Search
+                        </label >
                         <input
                             type="text"
                             value={search}
                             onChange={e => setSearch(e.target.value)}
                             onKeyDown={e => e.key === "Enter" && handleSubmit()}
-                            placeholder="Titel eller innehåll..."
+                            placeholder="Title or content..."
                             className={styleInput}
                         />
-                    </div>
-                </div>
+                    </div >
+                </div >
                 <div className="flex flex-wrap gap-4 items-end">
                     <div
                         className="mt-1 bg-parch border border-ink/20 rounded-lg flex flex-wrap p-2 gap-2 min-w-37.5 w-full">
@@ -89,7 +87,7 @@ export default function SearchBar({
                                 className={styleInput}
                             >
                                 {pageSizeOptions.map(size => (
-                                    <option key={size} value={size}>{size} per sida</option>
+                                    <option key={size} value={size}>{size} per page</option>
                                 ))}
                             </select>
                         </div>
@@ -97,13 +95,12 @@ export default function SearchBar({
                         {/* Submit */}
                         <span
                             onClick={handleSubmit}
-                            className={styleBtn}
-                        >
-                            Sök
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            className={styleBtn}>
+                            Search
+                        </span >
+                    </div >
+                </div >
+            </div >
+        </section >
     )
 }

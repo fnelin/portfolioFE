@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import ModalReview from "@/components/feature/modalreview"
+import ModalReview from "@/components/feature/modalreviewcard"
 import FullReviewCard from "@/components/feature/fullreviewcard"
 import ReviewSkeleton from "@/components/feature/reviewskeleton"
 

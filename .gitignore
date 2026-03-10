@@ -36,3 +36,4 @@ next-env.d.ts
 /app/generated/prisma
 *.db
 /.vscode/
+prisma/seed.json

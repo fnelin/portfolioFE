@@ -32,11 +32,11 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
                     ? styleDis
                     : styleAct}`}
             >
-                Föregående
+                Previous
             </Link>
 
             <span className="text-ink">
-                Sida {currentPage} av {totalPages}
+                Page {currentPage} of {totalPages}
             </span>
 
             <Link
@@ -46,7 +46,7 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
                     ? styleDis
                     : styleAct}`}
             >
-                Nästa
+                Next
             </Link>
         </div >
     </>
