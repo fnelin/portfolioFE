@@ -1,3 +1,5 @@
+import shuffle from "@/lib/shuffle"
+
 export default function HeroGrid() {
     /*Change to randomly selected from reviews.*/
     const imageUrls: string[] = [
@@ -11,8 +13,17 @@ export default function HeroGrid() {
         "images/diverselfie.png",
         "images/woodenboar.jpg",
         "images/dinner.jpg",
-        "images/darkwhaleshark.jpg"
+        "images/darkwhaleshark.jpg",
+        "images/ahascuba.png",
+        "images/clarionsign.png",
+        "images/dykleif.jpg",
+        "images/isaberg.png",
+        "images/ranas.png",
+        "images/sjomans.PNG",
+        "images/skrotencafe.png"
     ]
+
+    shuffle(imageUrls)
 
     return <section className="relative">
         <div className="

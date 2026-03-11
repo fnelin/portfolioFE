@@ -8,10 +8,11 @@ export async function readReviewCards(
     sortBy:string = "Date", 
     sortDirection:string = "Descending"){
 
-    const sortMap = new Map<string, string>();
-    sortMap.set("Date","createdAt")
-    sortMap.set("Title","titel")
-    sortMap.set("Score","score")
+    const sortMap = new Map([
+        ["Date", "createdAt"],
+        ["Title", "title"],
+        ["Score", "score"]
+    ])
 
     const sortByOrder = sortMap.get(sortBy)
     const sortOrder = sortDirection === "Ascending" ? "asc": "desc"
