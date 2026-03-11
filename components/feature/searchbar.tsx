@@ -50,7 +50,7 @@ export default function SearchBar({
     }
 
     return (
-        <section className="grid w-3/4 place-self-center">
+        <section className="grid w-3/4">
             <div className="
                     -mt-3 
                     p-4 

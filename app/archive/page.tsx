@@ -46,11 +46,11 @@ export default async function archivepage({ searchParams }: {
                 Archive
             </h2>
         </section>
-
-        <SearchBar
-            searchParams={await searchParams}
-            categories={categoriesAll} />
-
+        <div className="flex justify-center">
+            <SearchBar
+                searchParams={await searchParams}
+                categories={categoriesAll} />
+        </div>
         <ReviewGridArchive>
             <ReviewList items={reviews} />
         </ReviewGridArchive>
