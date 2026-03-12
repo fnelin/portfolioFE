@@ -188,9 +188,9 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
                 showCategoryPopup && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-ink/30">
                         <div className="bg-parch rounded-xl border border-ink/20 shadow-lg p-6 flex flex-col gap-4 min-w-80">
-                            <h3 className="font-heading text-lg text-ink">Ny kategori</h3>
+                            <h3 className="font-heading text-lg text-ink">New category</h3>
                             <div className="flex flex-col gap-1">
-                                <label className={styleLabel}>Kategorinamn</label>
+                                <label className={styleLabel}>Category label</label>
                                 <input
                                     type="text"
                                     value={newCategory}
@@ -217,7 +217,7 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
                                     }}
                                     className="px-3 py-1.5 bg-accent text-parch font-mono text-sm rounded-lg hover:bg-accent-light transition-colors duration-200"
                                 >
-                                    Create
+                                    Add
                                 </button>
                             </div>
                         </div>

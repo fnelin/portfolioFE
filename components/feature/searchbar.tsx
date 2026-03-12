@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { buildHref } from "@/lib/buildhref"
 import { styleButton, styleActive } from "@/lib/constants"
@@ -21,13 +21,26 @@ export default function SearchBar({
 }) {
     const router = useRouter()
 
-    const [search, setSearch] = useState(searchParams.search ?? "")
-    const [pageSize, setPageSize] = useState(searchParams.pagesize ?? "16")
-    const [sortBy, setSortBy] = useState(searchParams.sortby ?? "Date")
-    const [sortDirection, setSortDirection] = useState(searchParams.sortdirection ?? "Descending")
-    const [selectedCategories, setSelectedCategories] = useState<string[]>(
-        searchParams.categories ? searchParams.categories.split(",") : []
-    )
+    const [search, setSearch] = useState("")
+    const [pageSize, setPageSize] = useState("16")
+    const [sortBy, setSortBy] = useState("Date")
+    const [sortDirection, setSortDirection] = useState("Descending")
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+    /*
+    There was a hydrationerror when useState initialize direct from the searchParams
+    prop. Moving the propogation of searchParams to useEffect hook instead so useState 
+    starts as static literals. 
+    */
+    useEffect(() => {
+        setSearch(searchParams.search ?? "")
+        setPageSize(searchParams.pagesize ?? "16")
+        setSortBy(searchParams.sortby ?? "Date")
+        setSortDirection(searchParams.sortdirection ?? "Descending")
+        setSelectedCategories(
+            searchParams.categories ? searchParams.categories.split(",") : []
+        )
+    }, [searchParams])
+
     const styleBtn = styleButton + " " + styleActive
     const styleInput = "bg-parch border border-ink/20 rounded-lg px-3 py-1.5 font-body text-sm text-ink focus:outline-none focus:border-accent transition-colors duration-200"
     const styleLabel = "font-mono text-xs text-muted uppercase tracking-widest"
@@ -51,14 +64,7 @@ export default function SearchBar({
 
     return (
         <section className="grid w-3/4">
-            <div className="
-                    -mt-3 
-                    p-4 
-                    bg-parch-dark 
-                    rounded-xl 
-                    border 
-                    border-ink/10
-                    shadow">
+            <div className="-mt-3 p-4 bg-parch-dark rounded-xl border border-ink/10 shadow">
                 <div className="pb-2">
                     {/* Text search */}
                     <div className="flex flex-col gap-1 flex-1 min-w-50">
@@ -77,19 +83,7 @@ export default function SearchBar({
                 </div >
                 <div className="flex flex-wrap gap-4 items-end">
                     <div
-                        className="
-                            mt-1 
-                            p-2 
-                            bg-parch 
-                            border 
-                            border-ink/20 
-                            rounded-lg 
-                            flex 
-                            flex-wrap 
-                            justify-evenly 
-                            gap-2 
-                            min-w-37.5
-                            w-full">
+                        className="mt-1 p-2 bg-parch border border-ink/20 rounded-lg flex flex-wrap justify-evenly gap-2 min-w-37.5 w-full">
                         {categories.map(cat => (
                             <button
                                 type="button"
