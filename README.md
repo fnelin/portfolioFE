@@ -159,6 +159,7 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 + ~~Full review cards don`t display mobile only formatting~~
 + Pagination show more pages than availible when searching.
   + This is due to how Prisma works. Need to add another query with same WHERE clause and without take/skip for total count of selection
++ ~~Hydrationserror navbar & searchbox~~ (Multiline tailwind in client components consolidated to one-liners.)
 + Results after searching archive lost same width for all items.
 ## 📌 Wishlist
 + Client side form validation for create and edit forms.
