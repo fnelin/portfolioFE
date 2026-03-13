@@ -1,5 +1,6 @@
 import GithubIcon from "@/components/feature/githubicon"
 import LinekdinIcon from "@/components/feature/linkedinicon"
+import BlueskyIcon from "../feature/blueskyicon"
 import { Mail } from "lucide-react"
 
 export default function BottomBar() {
@@ -54,6 +55,11 @@ export default function BottomBar() {
                         className={styleContact}
                         aria-label="Email">
                         <Mail size={24} />
+                    </a>
+                    <a href="https://bsky.app/profile/fnelin.bsky.social"
+                        className={styleContact}
+                        aria-label="Bluesky">
+                        <BlueskyIcon />
                     </a>
                 </div>
 
