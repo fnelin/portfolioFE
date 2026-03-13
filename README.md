@@ -1,6 +1,9 @@
 # 💼 Frontend development showcase/portfolio
 As a student at Lexicon in a crash frontend dev course I set out to create a showcase/portfolio with my accumulated knowledge about HTML/CSS(Tailwind) Typescript/React/Nextjs.
 With this repository a connected [project plan](https://github.com/users/fnelin/projects/5) is available for transparent workflow showcase.<br>
+> [!NOTE]
+> 🚧 **More to come, later** 🚧 <br>
+> After two weeks this project has come to an end. Work will still be ongoing but closing thoughts can be found [here](#retrospective).<br /> This readme will be a living object with more details coming as I continue to learn and showcase my accumulated knowledge.
 ### ❔ About Lexicon Frontend development crash course
 The Lexicon Frontend dev crash course is a hands-on program designed to prepare for modern Frontend development roles. The training spans the full development lifecycle, from foundational HTML and CSS to building advanced applications with TypeScript, Node.js, JavaScript and React. Advanced AI assistance will be clearly marked within the code if such has been utilized from either Codepen and/or Copilot.<br>
 ### 🔍 Key areas of focus:
@@ -12,17 +15,17 @@ While the course in itself focus on a wide variety of technologies for creating 
 ## 📖 Instructions and workflow
 Instructions (in swedish) for the project can be found [here](https://github.com/Lexicon-Utbildning-Front-end-2025-2026/individuellt-arbete).<br>
 Detailed workflow can be found in the [project plan](https://github.com/users/fnelin/projects/5) while an overview look like this:
-- [X] 🎨 Create plan, wireframe and moc
-- [X] 🛠️ Research requirements, define scope & select toolset
-- [X] ✔️ Project greenlit by teachers/mentors
-- [X] 📋 Userstories created and translated into backlog tasks
-- [X] 🖼️ Install project and framework
-- [X] 🏃 Sprint 1 - Backend & architecture
-- [X] 🏃 Sprint 2 - Layout & UI components
-- [ ] 🏃 Sprint 3 - CRUD, accessibility & verification
+- [x] 🎨 Create plan, wireframe and moc
+- [x] 🛠️ Research requirements, define scope & select toolset
+- [x] ✔️ Project greenlit by teachers/mentors
+- [x] 📋 Userstories created and translated into backlog tasks
+- [x] 🖼️ Install project and framework
+- [x] 🏃 Sprint 1 - Backend & architecture
+- [x] 🏃 Sprint 2 - Layout & UI components
+- [x] 🏃 Sprint 3 - CRUD, accessibility & verification
 - [ ] 📜 Presentation, demo and feedback
-- [ ] 🍾 Project completed
-- [ ] ♻️ Retrospective
+- [x] 🍾 Project completed
+- [x] ♻️ Retrospective
 - [ ] 👷 Continued work and updates as knowledgebase grows
 
 ## 💭 Pitch & Moc
@@ -135,6 +138,7 @@ model category {
   reviews       reviews[]
   }
 ```
+
 ## 🔤 Typography
 Three fonts are used, each for a distinct role:
 | Role | Font | Usage |
@@ -158,7 +162,7 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 ## 🐛 Known bugs
 + ~~Full review cards don`t display mobile only formatting~~
 + Pagination show more pages than availible when searching.
-  + This is due to how Prisma works. Need to add another query with same WHERE clause and without take/skip for total count of selection
+  + This is due to how Prisma works. Need to add another query with same WHERE clause and without take/skip for total count of selection.
 + ~~Hydrationserror navbar & searchbox~~ (Multiline tailwind in client components consolidated to one-liners.)
 + Results after searching archive lost same width for all items.
 ## 📌 Wishlist
@@ -170,9 +174,18 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 + Replace score with stars/boilerplate green
 + Full fledged admin mode
 + Search functions such as sort by columns (asc, desc) etc, view table/cards
-> [!NOTE]
-> 🚧 **More to come**. 🚧 <br>
-> This readme will be a living object with more details coming as they form and the project progress.
+# 📖 Retrospective
+After two weeks of living with this project I`m pleased with how it came out and how I kept to the project plan, workflow and above objectives. AI in the form of claude.ai and copilot helped out with much of the mundane coding work, ie translate form input values to values ready for database insertion or keeping tailwind consistent over different components.<p>
+The application is in a state of where it could be published as a functional beta ready for mass testing.
+## 🌟 Three things that went well
+1. Modal dialog forms. Once I got my head around the routing needed and solving client-server side relationship issues the end result became better than expected.
+2. Hackatons! Relaxed way to test new tech and coming changes before committing to them.
+3. Server side database integration. As this course focus on frontend I expected more work before I had a functional database environment running.
+## 🔧 Three things that can be improved
+1. Bugcatching. A few bugs made it through and delayed the development process.
+2. Better at keeping feature branches "clean". One commit became very troublesome after the feature branch incorporated changes to several components at once.
+3.  Installationprocess for developers. As the package is configured moving it between developing machines is overly complicated
+
 # 🏅 About the author
 Former MCSD SQLServer developer who ventured into economics, finance and marketing before coming back as modern frontend developer with fullstack insights. <br>
 Other skills include but are not limited to analytical and business-oriented IT economist with experience in portfolio governance, budgeting, financial workflows and administration. Combines strong technical capabilities with a background in system development, databases, and BI. Skilled at driving structured ways of working, enabling informed decision making through clear analysis and acting as the link between IT and a broader organization.
