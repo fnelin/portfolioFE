@@ -30,12 +30,13 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
                 aria-disabled={nextDisabled}
                 className={`${styleBtn} ${currentPage <= 1
                     ? styleDis
-                    : styleAct}`}
+                    : styleAct}
+                    w-25 text-center`}
             >
                 Previous
             </Link>
 
-            <span className="text-ink">
+            <span className="text-ink mt-2 px-4 py-2">
                 Page {currentPage} of {totalPages}
             </span>
 
@@ -44,7 +45,8 @@ export default function Pagination({ currentPage, totalPages, searchParams }: { 
                 aria-disabled={previousDisabled}
                 className={`${styleBtn} ${currentPage >= totalPages
                     ? styleDis
-                    : styleAct}`}
+                    : styleAct}
+                    w-25 text-center`}
             >
                 Next
             </Link>

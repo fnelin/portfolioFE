@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "@/components/ui/header"
 import BottomBar from "@/components/ui/footer"
 
+
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   weight: ['600', '800'],
@@ -38,8 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bricolage.variable} ${jakarta.variable} ${dmMono.variable} antialiased`}
-      ><header className="sticky top-0 z-10 opacity-90">
+        className={`${bricolage.variable} ${jakarta.variable} ${dmMono.variable} antialiased`}>
+        <header className="sticky top-0 z-10 opacity-90">
           <TopBar />
         </header>
         {children}

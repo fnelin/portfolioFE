@@ -6,15 +6,31 @@ import Pagination from "@/components/feature/pageination";
 import SearchBar from "@/components/feature/searchbar";
 
 export default async function archivepage({ searchParams }: {
-    searchParams: Promise<{ page?: string; pagesize?: string; search?: string, categories?: string }>
+    searchParams: Promise<{
+        page?: string;
+        pagesize?: string;
+        search?: string,
+        categories?: string,
+        sortby?: string,
+        sortdirection?: string
+    }>
 }) {
+    const {
+        page = "1",
+        pagesize = "16",
+        search: searchString = "",
+        categories,
+        sortby = "Date",
+        sortdirection = "Descending",
+    } = await searchParams
 
-    const { page = "1", pagesize = "15", search: searchString = "", categories } = await searchParams
     const currentPage = Number(page)
     const pageSize = Number(pagesize)
     const categoriesArray = categories?.split(",").filter(c => c !== "") ?? []
-    const totalPages = Math.ceil(await prisma.reviews.count() / pageSize)
-    const reviews = await readReviewCards(currentPage, pageSize, searchString, categoriesArray)
+    const sortBy = sortby
+    const sortDirection = sortdirection
+    const totalPages = Math.ceil(await prisma.reviews.count() / pageSize) /* MOVE Counts regardless of searchcriteria*/
+    const reviews = await readReviewCards(currentPage, pageSize, searchString, categoriesArray, sortBy, sortDirection)
     const categoriesAll = await fetchCategories()
 
     return <>
@@ -30,11 +46,11 @@ export default async function archivepage({ searchParams }: {
                 Archive
             </h2>
         </section>
-
-        <SearchBar
-            searchParams={await searchParams}
-            categories={categoriesAll} />
-
+        <div className="flex justify-center">
+            <SearchBar
+                searchParams={await searchParams}
+                categories={categoriesAll} />
+        </div>
         <ReviewGridArchive>
             <ReviewList items={reviews} />
         </ReviewGridArchive>

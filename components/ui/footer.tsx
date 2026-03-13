@@ -1,3 +1,5 @@
+import GithubIcon from "@/components/feature/githubicon"
+import LinekdinIcon from "@/components/feature/linkedinicon"
 import { Mail } from "lucide-react"
 
 export default function BottomBar() {
@@ -40,18 +42,18 @@ export default function BottomBar() {
                         target="_blank"
                         className={styleContact}
                         aria-label="LinkedIn">
-                        LinkedIn
+                        <LinekdinIcon />
                     </a>
                     <a href="https://github.com/fnelin"
                         target="_blank"
                         className={styleContact}
                         aria-label="GitHub">
-                        Gitub
+                        <GithubIcon />
                     </a>
                     <a href="mailto:fredrik.nelin@outlook.com"
                         className={styleContact}
                         aria-label="Email">
-                        <Mail size={18} />
+                        <Mail size={24} />
                     </a>
                 </div>
 
