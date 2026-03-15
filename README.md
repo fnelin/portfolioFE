@@ -174,6 +174,11 @@ I asked for an off-white base with deep ink and mellow accent. The inital color 
 + Replace score with stars/boilerplate green
 + Full fledged admin mode
 + Search functions such as sort by columns (asc, desc) etc, view table/cards
+## License
+The source code in this repository is licensed under the MIT License.<br />
+Images and other media assets are licensed separately under
+CC BY-NC 4.0 and may not be used for commercial purposes.
+See LICENSE-ASSETS for details.
 # 📖 Retrospective
 After two weeks of living with this project I`m pleased with how it came out and how I kept to the project plan, workflow and above objectives. AI in the form of claude.ai and copilot helped out with much of the mundane coding work, ie translate form input values to values ready for database insertion or keeping tailwind consistent over different components.<p>
 The application is in a state of where it could be published as a functional beta ready for mass testing.
