@@ -71,25 +71,25 @@ export default function HeroGrid() {
                 className="
                 hidden 
                 sm:block"/>
-            <img src={imageUrls[6]}
+            <img src={imageUrls[6]} alt=""
                 className="
                  hidden
                  sm:block
                  md:col-span-2 md:row-span-2"/>
-            <img src={imageUrls[7]}
+            <img src={imageUrls[7]} alt=""
                 className="
                  hidden
                  sm:block
                  "/>
-            <img src={imageUrls[8]}
+            <img src={imageUrls[8]} alt=""
                 className="
                  hidden
                  sm:block"/>
-            <img src={imageUrls[9]}
+            <img src={imageUrls[9]} alt=""
                 className="
                  hidden
                  md:block"/>
-            <img src={imageUrls[10]}
+            <img src={imageUrls[10]} alt=""
                 className="
                  hidden
                  md:block"/>

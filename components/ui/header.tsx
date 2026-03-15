@@ -41,7 +41,8 @@ export default function TopBar() {
         <a href="/">
             <Image src={icon}
                 alt=""
-                height={24} />
+                height={24}
+                 />
         </a>
         <nav className="
             text-ink-light 
