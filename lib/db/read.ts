@@ -10,7 +10,7 @@ export async function readReviewCards(
 
     const sortMap = new Map([
         ["Date", "createdAt"],
-        ["Title", "title"],
+        ["Title", "titel"],
         ["Score", "score"]
     ])
 
