@@ -1,9 +1,10 @@
-# 💼 Frontend development showcase/portfolio
-As a student at Lexicon in a crash frontend dev course I set out to create a showcase/portfolio with my accumulated knowledge about HTML/CSS(Tailwind) Typescript/React/Nextjs.
-With this repository a connected [project plan](https://github.com/users/fnelin/projects/5) is available for transparent workflow showcase.<br>
 > [!NOTE]
 > 🚧 **More to come, later** 🚧 <br>
 > After two weeks this project has come to an end. Work will still be ongoing but closing thoughts can be found [here](#-retrospective). This readme will be a living object with more details coming as I continue to learn...
+
+# 💼 Frontend development showcase/portfolio
+As a student at Lexicon in a crash frontend dev course I set out to create a showcase/portfolio with my accumulated knowledge about HTML/CSS(Tailwind) Typescript/React/Nextjs.
+With this repository a connected [project plan](https://github.com/users/fnelin/projects/5) is available for transparent workflow showcase.<br>
 ### ❔ About Lexicon Frontend development crash course
 The Lexicon Frontend dev crash course is a hands-on program designed to prepare for modern Frontend development roles. The training spans the full development lifecycle, from foundational HTML and CSS to building advanced applications with TypeScript, Node.js, JavaScript and React. Advanced AI assistance will be clearly marked within the code if such has been utilized from either Codepen and/or Copilot.<br>
 ### 🔍 Key areas of focus:
