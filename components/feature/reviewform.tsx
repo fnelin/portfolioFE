@@ -81,7 +81,7 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
 
                 <span className="flex gap-4">
                     <div className="flex flex-col gap-1">
-                        <label className={styleLabel}>Cetegory</label>
+                        <label className={styleLabel}>Category</label>
                         <div className="flex gap-4">
                             <select name="category_id"
                                 defaultValue={review?.category_id}
