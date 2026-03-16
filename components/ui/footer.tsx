@@ -1,6 +1,6 @@
-import GithubIcon from "@/components/feature/githubicon"
-import LinekdinIcon from "@/components/feature/linkedinicon"
-import BlueskyIcon from "../feature/blueskyicon"
+import GithubIcon from "@/components/feature/contacticons/githubicon"
+import LinekdinIcon from "@/components/feature/contacticons/linkedinicon"
+import BlueskyIcon from "@/components/feature/contacticons/linkedinicon"
 import { Mail } from "lucide-react"
 
 export default function BottomBar() {
