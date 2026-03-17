@@ -33,13 +33,7 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
 
 
     return (
-        <form onSubmit={handleSubmit} className="
-                                        flex 
-                                        flex-col 
-                                        gap-4 
-                                        p-6 
-                                        w-full 
-                                        max-w-160">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6  w-full  max-w-160">
 
             <h2 className="font-heading text-2xl text-ink">
                 {isEdit ? "Edit review" : "New review"}
@@ -81,7 +75,7 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
 
                 <span className="flex gap-4">
                     <div className="flex flex-col gap-1">
-                        <label className={styleLabel}>Cetegory</label>
+                        <label className={styleLabel}>Category</label>
                         <div className="flex gap-4">
                             <select name="category_id"
                                 defaultValue={review?.category_id}
@@ -136,50 +130,18 @@ export default function ReviewForm({ review, categories }: { review?: Review, ca
             <span className="flex gap-8 justify-between">
                 <button type="reset"
                     onClick={() => router.back()}
-                    className="
-                        mt-2 
-                        px-4 
-                        py-2
-                        border
-                        border-ink/20
-                        rounded-lg
-                        cursor-pointer
-                        hover:border
-                        hover:border-ink/60
-                        ">
+                    className="mt-2 px-4 py-2 border border-ink/20 rounded-lg cursor-pointer hover:border hover:border-ink/60">
                     Don`t save
                 </button>
                 <button type="reset"
                     disabled={isPending}
-                    className="
-                        mt-2 
-                        px-4 
-                        py-2
-                        border
-                        border-ink/20
-                        rounded-lg
-                        cursor-pointer
-                        hover:border
-                        hover:border-ink/60
-                        ">
+                    className="mt-2 px-4 py-2 border border-ink/20 rounded-lg cursor-pointer hover:border hover:border-ink/60">
                     Reset form
                 </button>
                 <button
                     type="submit"
                     disabled={isPending}
-                    className="
-                        mt-2 
-                        px-4 
-                        py-2 
-                        bg-accent 
-                        text-parch 
-                        font-mono 
-                        text-sm 
-                        rounded-lg 
-                        cursor-pointer
-                        hover:bg-accent-light 
-                        transition-colors 
-                        duration-200">
+                    className="mt-2 px-4 py-2 bg-accent text-parch font-mono text-sm rounded-lg cursor-pointer hover:bg-accent-light transition-colors duration-200">
                     {isPending ? "Saving..." : isEdit ? "Save changes" : "Save review"}
                 </button>
 

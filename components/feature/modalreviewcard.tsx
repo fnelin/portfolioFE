@@ -19,13 +19,7 @@ export default function ModalReview({ children }: { children: React.ReactNode })
                     dialogReference.current?.close()
                 }
             }}
-            className="
-                m-auto
-                rounded-2xl
-                bg-parch
-                shadow-ink/50
-                backdrop:bg-ink/50
-                backdrop:backdrop-blur-sm">
+            className="m-auto rounded-2xl bg-parch shadow-ink/50 backdrop:bg-ink/50 backdrop:backdrop-blur-sm">
             {children}
         </dialog>
     )

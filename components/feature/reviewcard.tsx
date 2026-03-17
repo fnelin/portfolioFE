@@ -88,7 +88,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         font-mono 
                         text-sm 
                         bg-accent
-                        text-parch
+                        text-gray-100
                         rounded-full">
                                 <span className="hidden sm:inline">
                                     Score:
@@ -102,7 +102,7 @@ export default function ReviewCard({ items }: { items: reviewshort[] }) {
                         sm:text-xl
                         sm:py-2">
                             <span className="hidden sm:block">
-                                {rev.titel}
+                                {rev.titel.length > 55 ? `${rev.titel.substring(0, 55)}...` : rev.titel}
                             </span>
                             <span className="block sm:hidden">
                                 {rev.titel.length > maxTitel ? `${rev.titel.substring(0, maxTitel)}...` : rev.titel}

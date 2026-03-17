@@ -30,26 +30,14 @@ export default function TopBar() {
         e.preventDefault();
         setAdminMode(!adminMode);
     };
-    return <div
-        className="
-            flex 
-            justify-between
-            items-center
-            px-4 
-            py-2 
-            bg-parch-dark">
+    return <div className="flex justify-between items-center px-4 py-2 bg-parch-dark">
         <a href="/">
-            <Image src={icon}
-                alt=""
-                height={24}
-                 />
+            <Image src={icon} alt="Application root" height={24}
+            />
         </a>
-        <nav className="
-            text-ink-light 
-            font-semibold">
+        <nav className="text-ink-light font-semibold">
             <a href="/"
-                className=
-                "px-2">
+                className="px-2">
                 Home
             </a>
             <Link href="/admin/review/create"
@@ -63,7 +51,7 @@ export default function TopBar() {
             </a>
             <a href="#"
                 onClick={handleAdminClick}
-                className={`px-2 ${adminMode ? "text-parch bg-accent" : ""}`}>
+                className={`px-2 ${adminMode ? "text-gray-100 bg-accent" : ""}`}>
                 Admin
             </a>
         </nav>
