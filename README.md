@@ -23,7 +23,7 @@ Detailed workflow can be found in the [project plan](https://github.com/users/fn
 - [x] 🏃 Sprint 1 - Backend & architecture
 - [x] 🏃 Sprint 2 - Layout & UI components
 - [x] 🏃 Sprint 3 - CRUD, accessibility & verification
-- [ ] 📜 Presentation, demo and feedback
+- [x] 📜 Presentation, demo and feedback
 - [x] 🍾 Project completed
 - [x] ♻️ Retrospective
 - [ ] 👷 Continued work and updates as knowledgebase grows
